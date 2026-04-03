@@ -1,0 +1,912 @@
+import { Product, Category, Review, Brand } from './types';
+
+export const PRODUCTS: Product[] = [
+  // --- Abib ---
+  {
+    id: 'abib-sunstick',
+    name: 'Abib Air Sunstick Smoothing Bar',
+    brand: 'Abib',
+    price: 26.00,
+    image: 'https://i.pinimg.com/1200x/cc/e5/56/cce556461081728337924218d8e2a73c.jpg',
+    category: 'Sun Care',
+    skinType: ['All', 'Oily'],
+    rating: 4.9,
+    description: 'A convenient sunstick that glides on smoothly without any stickiness, providing powerful UV protection.',
+    ingredients: ['Centella Asiatica', 'Aloe Vera', 'Camellia Sinensis']
+  },
+  {
+    id: 'abib-collagen-pad',
+    name: 'Abib Jericho Rose Collagen Pad',
+    brand: 'Abib',
+    price: 28.00,
+    image: 'https://kocos.bg/images/2/fda60d228dc42fdab66d006252551048/61-XjnOfLGL.-SL1500--12181.jpg',
+    category: 'Masks & Treatments',
+    skinType: ['Dry', 'Mature'],
+    rating: 4.8,
+    description: 'Firming collagen pads infused with Jericho Rose extract to improve skin elasticity and hydration.',
+    ingredients: ['Jericho Rose Extract', 'Collagen', 'Peptides']
+  },
+  {
+    id: 'abib-lip-mask',
+    name: 'Abib PDRN Collagen Lip Mask',
+    brand: 'Abib',
+    price: 27.00,
+    image: 'https://i.pinimg.com/736x/37/b7/c2/37b7c25803b1ffdbc6ca7d67e14f9ad9.jpg',
+    category: 'Masks & Treatments',
+    skinType: ['All'],
+    rating: 4.7,
+    description: 'A glazed jelly lip mask that deeply nourishes and plumps your lips overnight.',
+    ingredients: ['PDRN', 'Collagen', 'Shea Butter']
+  },
+  {
+    id: 'abib-overnight-mask',
+    name: 'Abib Rice Probiotics Overnight Mask',
+    brand: 'Abib',
+    price: 29.00,
+    image: 'https://d2c3d01lcpw2ui.cloudfront.net/gl/data/editor/2412/3e864b82c2b36cf382326ca5b189ebad_1734670750_3087.jpg',
+    category: 'Masks & Treatments',
+    skinType: ['Dry', 'Sensitive'],
+    rating: 4.8,
+    description: 'Barrier-strengthening overnight mask with rice probiotics for a healthy, glowing complexion.',
+    ingredients: ['Rice Extract', 'Probiotics', 'Lactobacillus']
+  },
+
+  // --- Anua ---
+  {
+    id: 'anua-niacinamide',
+    name: 'Anua 10+ Niacinamide Serum',
+    brand: 'Anua',
+    price: 27.00,
+    image: 'https://i.pinimg.com/736x/17/f1/09/17f109fb7591189e8d533f94fb6fa8c4.jpg',
+    category: 'Serums & Ampoules',
+    skinType: ['All', 'Dull'],
+    rating: 4.8,
+    description: 'High-concentration niacinamide serum for brightening and pore control.',
+    ingredients: ['Niacinamide 10%', 'TXA 4%', 'Zinc PCA']
+  },
+  {
+    id: 'anua-toner',
+    name: 'Anua Heartleaf 77% Soothing Toner',
+    brand: 'Anua',
+    price: 25.00,
+    image: 'https://m.media-amazon.com/images/I/51AeF0suKmL.jpg',
+    category: 'Toners & Essences',
+    skinType: ['Sensitive', 'Acne-Prone'],
+    rating: 4.9,
+    description: 'The viral soothing toner that calms irritation and balances skin pH.',
+    ingredients: ['Heartleaf Extract 77%', 'Centella Asiatica', 'Portulaca Oleracea'],
+    isBestSeller: true
+  },
+  {
+    id: 'anua-oil',
+    name: 'Anua Heartleaf Pore Cleansing Oil',
+    brand: 'Anua',
+    price: 25.00,
+    image: 'https://bearel.fi/wp-content/uploads/2025/01/Anua-Heartleaf-Pore-Control-Cleansing-Oil-2-1.jpg',
+    category: 'Cleansers',
+    skinType: ['Oily', 'Combination'],
+    rating: 4.9,
+    description: 'Effective cleansing oil that removes makeup and blackheads without clogging pores.',
+    ingredients: ['Heartleaf Extract', 'Jojoba Oil', 'Olive Oil']
+  },
+  {
+    id: 'anua-foam',
+    name: 'Anua Heartleaf Pore Cleansing Foam',
+    brand: 'Anua',
+    price: 19.00,
+    image: 'https://i.pinimg.com/736x/4c/f3/5e/4cf35e4a855dee568ae4a202ec5d01ed.jpg',
+    category: 'Cleansers',
+    skinType: ['Oily', 'Combination', 'Sensitive'],
+    rating: 4.8,
+    description: 'Deep cleansing foam with Quercetinol to clear pores and soothe skin.',
+    ingredients: ['Heartleaf Extract', 'Quercetinol', 'Hyaluronic Acid'],
+    isBestSeller: true
+  },
+  {
+    id: 'anua-peach',
+    name: 'Anua Peach 70+ Niacinamide Serum',
+    brand: 'Anua',
+    price: 27.00,
+    image: 'https://www.adorebeauty.com.au/pim_media/000/472/656/ANUA__PEACH_70_NIACIN_SERUM.png',
+    category: 'Serums & Ampoules',
+    skinType: ['Dry', 'Normal', 'Dull'],
+    rating: 4.8,
+    description: 'Peach-infused serum for a smooth, glass-skin finish and brightened tone.',
+    ingredients: ['Peach Extract 70%', 'Niacinamide', 'Vitamin B12']
+  },
+  {
+    id: 'anua-azelaic-acid',
+    name: 'Anua Azelaic Acid 10 Hyaluron Redness Soothing Serum',
+    brand: 'Anua',
+    price: 27.00,
+    image: 'https://m.media-amazon.com/images/I/612vFZbbN+L._AC_UF894,1000_QL80_.jpg',
+    category: 'Serums & Ampoules',
+    skinType: ['Sensitive', 'Acne-Prone', 'Redness'],
+    rating: 4.7,
+    description: 'Soothing serum with Azelaic Acid and Hyaluronic Acid to reduce redness and calm skin.',
+    ingredients: ['Azelaic Acid 10%', 'Hyaluronic Acid', 'Centella Asiatica'],
+    isNew: true
+  },
+
+  // --- Axis-Y ---
+  {
+    id: 'axis-y-sunscreen',
+    name: 'Axis-Y Physical Sunscreen',
+    brand: 'Axis-Y',
+    price: 22.00,
+    image: 'https://i.pinimg.com/1200x/ed/17/b9/ed17b95349b3abc18d1e356f31c0dd5b.jpg',
+    category: 'Sun Care',
+    skinType: ['All', 'Sensitive'],
+    rating: 4.7,
+    description: 'No-stress physical sunscreen that provides broad-spectrum protection without a white cast.',
+    ingredients: ['Mugwort', 'Niacinamide', 'Squalane']
+  },
+  {
+    id: 'axis-y-serum',
+    name: 'Axis-Y Dark Spot Correcting Serum',
+    brand: 'Axis-Y',
+    price: 22.00,
+    image: 'https://i.pinimg.com/736x/58/d0/c2/58d0c27ed6022e5f144d98f0e930b2c6.jpg',
+    category: 'Serums & Ampoules',
+    skinType: ['Oily', 'Combination', 'Dull'],
+    rating: 4.9,
+    description: 'A niacinamide-based serum that corrects dark spots and improves uneven skin tone.',
+    ingredients: ['Niacinamide 5%', 'Papaya', 'Sea Buckthorn']
+  },
+
+  // --- Biodance ---
+  {
+    id: 'biodance-mask',
+    name: 'Biodance Bio collagen real deep mask',
+    brand: 'Biodance',
+    price: 7.00,
+    image: 'https://m.media-amazon.com/images/I/51Qiwz3ZiaL._AC_UF1000,1000_QL80_.jpg',
+    category: 'Masks & Treatments',
+    skinType: ['All', 'Dry', 'Mature'],
+    rating: 4.9,
+    description: 'Deeply hydrating collagen mask that improves skin elasticity and texture.',
+    ingredients: ['Bio-Collagen', 'Hyaluronic Acid', 'Probiotics'],
+    isBestSeller: true
+  },
+
+  // --- Celimax ---
+  {
+    id: 'celimax-retinal',
+    name: 'Celimax Retinal Shot Tightening Booster 15 ml',
+    brand: 'Celimax',
+    price: 24.00,
+    image: 'https://m.media-amazon.com/images/I/51utpRckeQL._AC_UF1000,1000_QL80_.jpg',
+    category: 'Serums & Ampoules',
+    skinType: ['Mature', 'Normal'],
+    rating: 4.8,
+    description: 'Retinal booster that tightens pores and improves skin texture.',
+    ingredients: ['Retinal', 'Adenosine', 'Peptides'],
+    isNew: true
+  },
+
+  // --- COSRX ---
+  {
+    id: 'ac-blemish-mask',
+    name: 'AC Collection Blemish Care Mask',
+    brand: 'COSRX',
+    price: 6.00,
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUDnET3wpdfMO-bYbdsSr80EEcETsAGtihAg&s',
+    category: 'Masks & Treatments',
+    skinType: ['Sensitive', 'Acne-Prone'],
+    rating: 4.6,
+    description: 'Targeted sheet mask for blemish-prone skin, helping to soothe and clear imperfections.',
+    ingredients: ['CentellAC-RX', 'Niacinamide', 'Tea Tree Oil']
+  },
+  {
+    id: 'acne-patch',
+    name: 'Acne Pimple Master Patch',
+    brand: 'COSRX',
+    price: 6.00,
+    image: 'https://i.pinimg.com/1200x/4b/aa/d6/4baad6dce6745643ad897fdb540fb78a.jpg',
+    category: 'Masks & Treatments',
+    skinType: ['Acne-Prone'],
+    rating: 4.9,
+    description: 'The cult-favorite hydrocolloid patches that speed up the healing process of breakouts.',
+    ingredients: ['Hydrocolloid']
+  },
+  {
+    id: 'snail-cream',
+    name: 'Advanced Snail 92 All in one Cream',
+    brand: 'COSRX',
+    price: 15.00,
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKLTbbSBZlhWFWU_xRNBMYgorrLF41ohzlEA&s',
+    category: 'Moisturizers',
+    skinType: ['All', 'Dehydrated'],
+    rating: 4.9,
+    description: 'A lightweight moisturizer enriched with 92% snail secretion filtrate for intense hydration.',
+    ingredients: ['Snail Secretion Filtrate', 'Betaine', 'Panthenol']
+  },
+  {
+    id: 'snail-essence',
+    name: 'Advanced Snail 96 Mucin Essence',
+    brand: 'COSRX',
+    price: 25.00,
+    image: 'https://arganabeauty.ae/cdn/shop/files/70_a8f11f4f-9b6b-4c69-ab41-e18394159add.jpg',
+    category: 'Toners & Essences',
+    skinType: ['All', 'Sensitive', 'Dehydrated'],
+    rating: 4.9,
+    description: 'A powerful essence that repairs skin damage and improves skin texture with 96% snail mucin.',
+    ingredients: ['Snail Secretion Filtrate', 'Sodium Hyaluronate', 'Arginine'],
+    isBestSeller: true
+  },
+  {
+    id: 'snail-eye-patch',
+    name: 'Advanced Snail Hydrogel Eye Patch',
+    brand: 'COSRX',
+    price: 28.00,
+    image: 'https://hbytala.com/cdn/shop/files/Advanced-Snail-Hydrogel-Eye-Patch-COSRX-2.jpg?v=1738661553&width=1080',
+    category: 'Masks & Treatments',
+    skinType: ['All'],
+    rating: 4.7,
+    description: 'Hydrating eye patches that soothe and brighten the delicate under-eye area.',
+    ingredients: ['Snail Mucin', 'Niacinamide', 'Adenosine']
+  },
+  {
+    id: 'snail-cleanser',
+    name: 'Advanced Snail Mucin Gel Cleanser',
+    brand: 'COSRX',
+    price: 15.50,
+    image: 'https://i.pinimg.com/736x/40/ab/9d/40ab9d559710d4f6b5be912d163c1d3e.jpg',
+    category: 'Cleansers',
+    skinType: ['All', 'Sensitive'],
+    rating: 4.8,
+    description: 'A gentle gel cleanser that removes impurities while maintaining the skin barrier.',
+    ingredients: ['Snail Mucin', 'Glycerin', 'Decyl Glucoside']
+  },
+  {
+    id: 'snail-eye-cream',
+    name: 'Advanced Snail Peptide Eye Cream',
+    brand: 'COSRX',
+    price: 28.00,
+    image: 'https://m.media-amazon.com/images/I/61lca3tLALL._AC_UF1000,1000_QL80_.jpg',
+    category: 'Moisturizers',
+    skinType: ['All', 'Mature'],
+    rating: 4.8,
+    description: 'Non-heavy eye cream that brightens and firms the eye area with snail mucin and peptides.',
+    ingredients: ['Snail Mucin', 'Peptides', 'Niacinamide']
+  },
+  {
+    id: 'aha-bha-toner',
+    name: 'AHA/BHA Clarifying Treatment Toner',
+    brand: 'COSRX',
+    price: 15.00,
+    image: 'https://hbytala.com/cdn/shop/products/AHABHA-Clarifying-Treatment-Toner-COSRX.png?v=1743672835&width=2048',
+    category: 'Toners & Essences',
+    skinType: ['Oily', 'Combination', 'Acne-Prone'],
+    rating: 4.7,
+    description: 'Exfoliating toner that helps to clear out pores and improve skin texture.',
+    ingredients: ['AHA', 'BHA', 'Willow Bark Water']
+  },
+  {
+    id: 'bha-liquid',
+    name: 'BHA Blackhead Power Liquid',
+    brand: 'COSRX',
+    price: 13.00,
+    image: 'https://shopatshams.com.pk/cdn/shop/files/cosrx-bha-blackhead-power-liquid-100-mlz1_9a1690447172564.jpg?v=1755527869',
+    category: 'Toners & Essences',
+    skinType: ['Oily', 'Combination', 'Acne-Prone'],
+    rating: 4.9,
+    description: 'Powerful BHA liquid that clears out blackheads and prevents new ones from forming.',
+    ingredients: ['Betaine Salicylate', 'Willow Bark Water', 'Niacinamide'],
+    isBestSeller: true
+  },
+  {
+    id: 'cosrx-niacinamide-15',
+    name: 'The Niacinamide 15 Serum',
+    brand: 'COSRX',
+    price: 25.00,
+    image: 'https://m.media-amazon.com/images/I/61-iyOhySqL._SL1500_.jpg',
+    category: 'Serums & Ampoules',
+    skinType: ['Oily', 'Acne-Prone'],
+    rating: 4.8,
+    description: 'High-concentration niacinamide serum for sebum control and blemish care.',
+    ingredients: ['Niacinamide 15%', 'Zinc PCA', 'Allantoin']
+  },
+  {
+    id: 'cosrx-retinol-01',
+    name: 'The Retinol 0.1 Cream',
+    brand: 'COSRX',
+    price: 27.00,
+    image: 'https://ljhospitals.com/wp-content/uploads/2025/04/COSRX-The-Retinol-0_1-Cream-20ml.jpg',
+    category: 'Moisturizers',
+    skinType: ['Mature', 'Normal'],
+    rating: 4.8,
+    description: 'Gentle retinol cream for beginners to improve fine lines and skin elasticity.',
+    ingredients: ['Retinol 0.1%', 'Panthenol', 'Adenosine']
+  },
+  {
+    id: 'cosrx-vit-c-13',
+    name: 'The Vitamin C 13 Serum',
+    brand: 'COSRX',
+    price: 18.50,
+    image: 'https://hbytala.com/cdn/shop/files/The-Vitamin-C-13-Serum-COSRX.jpg?v=1743673893&width=2048',
+    category: 'Serums & Ampoules',
+    skinType: ['All', 'Sensitive'],
+    rating: 4.8,
+    description: 'Gentle Vitamin C serum for brightening and antioxidant protection.',
+    ingredients: ['Vitamin C 13%', 'Tocotrienol', 'Hyaluronic Acid']
+  },
+  {
+    id: 'cosrx-ultra-light-sunscreen',
+    name: 'COSRX Ultra Light Invisible Sunscreen 50ml',
+    brand: 'COSRX',
+    price: 18.00,
+    image: 'https://m.media-amazon.com/images/I/61g8ze-pgsL._AC_UF1000,1000_QL80_.jpg',
+    category: 'Sun Care',
+    skinType: ['All', 'Sensitive'],
+    rating: 4.8,
+    description: 'Ultra-lightweight invisible sunscreen that provides high UV protection without any white cast.',
+    ingredients: ['Aloe Barbadensis Leaf Water', 'Witch Hazel', 'Vitamin E']
+  },
+  {
+    id: 'cosrx-rice-mask',
+    name: 'Ultimate Nourishing Rice Overnight Spa Mask',
+    brand: 'COSRX',
+    price: 19.00,
+    image: 'https://m.media-amazon.com/images/I/71lHwTQQzGL._AC_SL1500_.jpg',
+    category: 'Masks & Treatments',
+    skinType: ['Dry', 'Normal', 'Dull'],
+    rating: 4.9,
+    description: 'Nourishing overnight mask with rice extract for soft, glowing skin.',
+    ingredients: ['Rice Extract 68%', 'Niacinamide', 'Sunflower Seed Oil']
+  },
+  {
+    id: 'cosrx-snail-sheet-mask',
+    name: 'Advanced Snail Mucin Power Sheet Mask',
+    brand: 'COSRX',
+    price: 4.00,
+    image: 'https://commalax.ph/cdn/shop/files/Sali_24_50285d72-b252-4f5d-8f87-8b1d3e46b081.png?v=1713078037&width=2000',
+    category: 'Masks & Treatments',
+    skinType: ['All', 'Dehydrated'],
+    rating: 4.9,
+    description: 'Sheet mask dipped in snail mucin to provide deep hydration and repair.',
+    ingredients: ['Snail Secretion Filtrate', 'Glycerin', 'Arginine']
+  },
+
+  // --- Dr. Althea ---
+  {
+    id: 'dr-althea-barrier',
+    name: 'Dr. Althea 147 barrier cream 50ML',
+    brand: 'Dr. Althea',
+    price: 29.00,
+    image: 'https://www.beautybreeze.eu/cdn/shop/files/dr-althea-147-barrier-strengthening-cream-50ml-barrier-repair-intense-nourishment-sensitive-skin-recovery-3837224.webp?v=1754153628',
+    category: 'Moisturizers',
+    skinType: ['Dry', 'Sensitive', 'Mature'],
+    rating: 4.8,
+    description: 'Intensive barrier repair cream that nourishes and protects the skin.',
+    ingredients: ['Ceramides', 'Squalane', 'Panthenol']
+  },
+  {
+    id: 'dr-althea-relief',
+    name: 'Dr. Althea 345 relief cream 50ML',
+    brand: 'Dr. Althea',
+    price: 29.00,
+    image: 'https://images-na.ssl-images-amazon.com/images/I/51ANDu4OdpL._AC_UL495_SR435,495_.jpg',
+    category: 'Moisturizers',
+    skinType: ['Sensitive', 'Acne-Prone', 'Combination'],
+    rating: 4.9,
+    description: 'Soothing relief cream that calms irritation and reduces redness.',
+    ingredients: ['Centella Asiatica', 'Resveratrol', 'Niacinamide']
+  },
+  {
+    id: 'dr-althea-vit-c',
+    name: 'Dr. Althea Vitamin C Boosting Serum',
+    brand: 'Dr. Althea',
+    price: 29.00,
+    image: 'https://m.media-amazon.com/images/I/51FjGzm9kvL._AC_UF1000,1000_QL80_.jpg',
+    category: 'Serums & Ampoules',
+    skinType: ['All', 'Dull'],
+    rating: 4.8,
+    description: 'Brightening serum with Vitamin C to even out skin tone and boost radiance.',
+    ingredients: ['Vitamin C', 'Niacinamide', 'Tocopherol']
+  },
+  {
+    id: 'dr-althea-eye-serum',
+    name: 'Dr. Althea Eye Serum',
+    brand: 'Dr. Althea',
+    price: 22.00,
+    image: 'https://cuddluxe.com/cdn/shop/files/a6537a79-f540-4127-88c3-62fbeda5d44b-1000x1000-kUO9fZnXNozYujuccUbJe0f5DoabLdUfV8zchXfA_grande.webp?v=1746278102',
+    category: 'Serums & Ampoules',
+    skinType: ['All', 'Mature'],
+    rating: 4.8,
+    description: 'Revitalizing eye serum that targets dark circles and fine lines.',
+    ingredients: ['Peptides', 'Caffeine', 'Niacinamide']
+  },
+  {
+    id: 'dr-althea-gel-cleanser',
+    name: 'Dr. Althea Green Relief Amino Gel Cleanser',
+    brand: 'Dr. Althea',
+    price: 24.00,
+    image: 'https://nudieglow.com/cdn/shop/files/Dr.-Althea-Green-Relief-Amino-Gel-Cleanser-Nudie-Glow-Australia_800x.jpg?v=1725025681',
+    category: 'Cleansers',
+    skinType: ['Sensitive', 'All'],
+    rating: 4.8,
+    description: 'Gentle gel cleanser that removes impurities while soothing the skin.',
+    ingredients: ['Amino Acids', 'Green Tea Extract', 'Centella Asiatica']
+  },
+  {
+    id: 'dr-althea-radiance-essence',
+    name: 'Dr. Althea Natural Radiance Essence',
+    brand: 'Dr. Althea',
+    price: 22.00,
+    image: 'https://www.skinobelle.com/cdn/shop/files/511TKL0aWpL._AC_UF1000_1000_QL80.jpg?v=1766565462&width=1445',
+    category: 'Toners & Essences',
+    skinType: ['All', 'Dull'],
+    rating: 4.7,
+    description: 'Essence that enhances natural skin radiance and provides deep hydration.',
+    ingredients: ['Pearl Extract', 'Niacinamide', 'Hyaluronic Acid']
+  },
+  {
+    id: 'dr-althea-cleansing-balm',
+    name: 'Dr. Althea Pure Grinding Cleansing Balm',
+    brand: 'Dr. Althea',
+    price: 26.00,
+    image: 'https://m.media-amazon.com/images/I/41+axtQJbnL._QL92_SH45_SS200_.jpg',
+    category: 'Cleansers',
+    skinType: ['All', 'Dry'],
+    rating: 4.9,
+    description: 'Unique grinding cleansing balm that melts away makeup and impurities.',
+    ingredients: ['Camellia Oil', 'Grapeseed Oil', 'Vitamin E']
+  },
+  {
+    id: 'dr-althea-345-mist',
+    name: 'Dr.Althea 345 Relief Cream Mist',
+    brand: 'Dr. Althea',
+    price: 29.00,
+    image: 'https://www.yourglamlb.com/cdn/shop/files/A5C3B7BB-CE29-4821-AA6B-78AC1CB76743.webp?v=1770701098&width=1200',
+    category: 'Toners & Essences',
+    skinType: ['Sensitive', 'Dry'],
+    rating: 4.8,
+    description: 'Creamy mist that provides instant relief and hydration to irritated skin.',
+    ingredients: ['Centella Asiatica', 'Ceramides', 'Panthenol']
+  },
+  {
+    id: 'dr-althea-reju-cream',
+    name: 'Dr.Althea Reju 5000 Cream',
+    brand: 'Dr. Althea',
+    price: 31.00,
+    image: 'https://m.media-amazon.com/images/I/51OI+pHTlZL.jpg',
+    category: 'Moisturizers',
+    skinType: ['Mature', 'Dry'],
+    rating: 4.9,
+    description: 'Rejuvenating cream that targets deep wrinkles and loss of elasticity.',
+    ingredients: ['PDRN', 'Peptides', 'Collagen']
+  },
+
+  // --- Eqqualberry ---
+  {
+    id: 'eqqualberry-bakuchiol-cream',
+    name: 'Eqqualberry Bakuchiol Plumping Capsule Cream',
+    brand: 'Eqqualberry',
+    price: 27.00,
+    image: 'https://feel22.com/cdn/shop/files/EqqualberryBakuchiolPlumpingCapsuleCream.png?v=1758098024',
+    category: 'Moisturizers',
+    skinType: ['All', 'Mature'],
+    rating: 4.8,
+    description: 'Plumping cream with bakuchiol capsules for gentle anti-aging care.',
+    ingredients: ['Bakuchiol', 'Collagen', 'Ceramides']
+  },
+  {
+    id: 'eqqualberry-bakuchiol-serum',
+    name: 'Eqqualberry Bakuchiol Plumping Serum',
+    brand: 'Eqqualberry',
+    price: 26.00,
+    image: 'https://hbytala.com/cdn/shop/files/Bakuchiol-Plumping-Serum-EQQUALBERRY.jpg?crop=center&height=1200&v=1743673335&width=1200',
+    category: 'Serums & Ampoules',
+    skinType: ['All', 'Sensitive'],
+    rating: 4.8,
+    description: 'Gentle plumping serum that improves skin elasticity without irritation.',
+    ingredients: ['Bakuchiol', 'Hyaluronic Acid', 'Niacinamide']
+  },
+  {
+    id: 'eqqualberry-nad-cream',
+    name: 'Eqqualberry NAD+ Peptide Boosting Cream',
+    brand: 'Eqqualberry',
+    price: 27.00,
+    image: 'https://btime.om/cdn/shop/files/01_c6d8055f-441b-4904-9040-d1487b3958d8.png?v=1767658611',
+    category: 'Moisturizers',
+    skinType: ['Mature', 'Dry'],
+    rating: 4.9,
+    description: 'Advanced peptide cream that boosts skin energy and resilience.',
+    ingredients: ['NAD+', 'Peptides', 'Adenosine']
+  },
+  {
+    id: 'eqqualberry-nad-serum',
+    name: 'Eqqualberry NAD+ Peptide Boosting Smoothie Serum',
+    brand: 'Eqqualberry',
+    price: 26.00,
+    image: 'https://hbytala.com/cdn/shop/files/NAD-Peptide-Boosting-Serum-EQQUALBERRY.jpg?v=1764754470&width=2048',
+    category: 'Serums & Ampoules',
+    skinType: ['All', 'Mature'],
+    rating: 4.9,
+    description: 'Smoothie-textured serum that revitalizes and firms the skin.',
+    ingredients: ['NAD+', 'Peptides', 'Vitamin B12']
+  },
+  {
+    id: 'eqqualberry-vitamin-cream',
+    name: 'Eqqualberry Vitamin Illuminating Cream',
+    brand: 'Eqqualberry',
+    price: 27.00,
+    image: 'https://hbytala.com/cdn/shop/files/Vitamin-illuminating-Cream-EQQUALBERRY.jpg?v=1769765588&width=2048',
+    category: 'Moisturizers',
+    skinType: ['All', 'Dull'],
+    rating: 4.8,
+    description: 'Illuminating cream packed with vitamins for a bright, healthy glow.',
+    ingredients: ['Vitamin C', 'Vitamin E', 'Niacinamide']
+  },
+  {
+    id: 'eqqualberry-vitamin-serum',
+    name: 'Eqqualberry Vitamin Illuminating Serum',
+    brand: 'Eqqualberry',
+    price: 26.00,
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWySkwEU1x1wOG2gQ81xzSHk6fjRrzkA1qCA&s',
+    category: 'Serums & Ampoules',
+    skinType: ['All', 'Dull'],
+    rating: 4.8,
+    description: 'Brightening serum that targets uneven skin tone and dark spots.',
+    ingredients: ['Vitamin C', 'Glutathione', 'Niacinamide']
+  },
+
+  // --- Laneige ---
+  {
+    id: 'laneige-lip-mask',
+    name: 'LANEIGE LIP SLEEPING MASK (Berry 20g)',
+    brand: 'Laneige',
+    price: 29.00,
+    image: 'https://hbytala.com/cdn/shop/files/Lip-Sleeping-Mask-Berry-20g-LANEIGE-2.jpg?v=1743674690&width=1000',
+    category: 'Masks & Treatments',
+    skinType: ['All'],
+    rating: 4.9,
+    description: 'Iconic lip sleeping mask that nourishes and softens lips overnight.',
+    ingredients: ['Berry Mix Complex', 'Vitamin C', 'Antioxidants']
+  },
+
+  // --- Medicube ---
+  {
+    id: 'medicube-glutathione',
+    name: 'Medicube AGE-R Glutathione Glow Capsule Cream',
+    brand: 'Medicube',
+    price: 26.00,
+    image: 'https://hbytala.com/cdn/shop/files/AGE-R-Glutathione-Glow-Capsule-Cream-MEDICUBE.jpg?v=1764063235&width=2048',
+    category: 'Moisturizers',
+    skinType: ['All', 'Dull'],
+    rating: 4.8,
+    description: 'Glutathione-infused cream for a radiant, glowing complexion.',
+    ingredients: ['Glutathione', 'Niacinamide', 'Vitamin C']
+  },
+  {
+    id: 'medicube-collagen-jelly',
+    name: 'Medicube Collagen Jelly Cream',
+    brand: 'Medicube',
+    price: 25.00,
+    image: 'https://eg.feel22.com/cdn/shop/files/medicube-collagen-jelly-cream-6867848.png?v=1765285482',
+    category: 'Moisturizers',
+    skinType: ['All', 'Mature'],
+    rating: 4.9,
+    description: 'Jelly-textured collagen cream that plumps and hydrates the skin.',
+    ingredients: ['Collagen', 'Elastin', 'Hyaluronic Acid']
+  },
+  {
+    id: 'medicube-pore-pad',
+    name: 'Medicube Zero Pore Pad',
+    brand: 'Medicube',
+    price: 25.00,
+    image: 'https://m.media-amazon.com/images/I/61A3gel565L._SL1500_.jpg',
+    category: 'Masks & Treatments',
+    skinType: ['Oily', 'Combination', 'Large Pores'],
+    rating: 4.9,
+    description: 'Exfoliating pads that help to tighten pores and control sebum.',
+    ingredients: ['AHA', 'BHA', 'Anti-Sebum P']
+  },
+  {
+    id: 'medicube-collagen-mask',
+    name: 'Medicube Collagen Overnight Wrapping Mask',
+    brand: 'Medicube',
+    price: 25.00,
+    image: 'https://cdn11.bigcommerce.com/s-hwo2s3k4l6/images/stencil/1280x1280/products/559/3534/Medicube_Collagen_Night_Wrapping_Mask_renewed_75_mL_KBeauty_Australia__39852.1744352853.jpg?c=2',
+    category: 'Masks & Treatments',
+    skinType: ['All', 'Mature'],
+    rating: 4.9,
+    description: 'Overnight mask that wraps the skin in collagen for maximum absorption.',
+    ingredients: ['Collagen', 'Peptides', 'Adenosine']
+  },
+  {
+    id: 'medicube-pdrn-serum',
+    name: 'Medicube PDRN Pink Peptide Serum',
+    brand: 'Medicube',
+    price: 25.00,
+    image: 'https://m.media-amazon.com/images/I/61OewnOw5jL._AC_UF1000,1000_QL80_.jpg',
+    category: 'Serums & Ampoules',
+    skinType: ['All', 'Mature'],
+    rating: 4.9,
+    description: 'Advanced PDRN serum that revitalizes skin and improves elasticity with pink peptides.',
+    ingredients: ['PDRN', 'Peptides', 'Niacinamide']
+  },
+  {
+    id: 'medicube-pdrn-cream',
+    name: 'Medicube PDRN Pink Capsule Cream',
+    brand: 'Medicube',
+    price: 26.00,
+    image: 'https://hbytala.com/cdn/shop/files/PDRN-Pink-Collagen-Capsule-Cream-MEDICUBE.jpg?v=1760954192&width=2048',
+    category: 'Moisturizers',
+    skinType: ['All', 'Dry'],
+    rating: 4.9,
+    description: 'Nourishing capsule cream with PDRN to strengthen the skin barrier and provide deep hydration.',
+    ingredients: ['PDRN', 'Ceramides', 'Hyaluronic Acid']
+  },
+
+  // --- Numbuzin ---
+  {
+    id: 'numbuzin-eye-cream',
+    name: 'Numbuzin 9+ Retinol Volumetox Eye Cream',
+    brand: 'Numbuzin',
+    price: 26.00,
+    image: 'https://kimbeautywarehouse.com.au/cdn/shop/files/XXL_p0219611640.webp?v=1751339410',
+    category: 'Serums & Ampoules',
+    skinType: ['Mature', 'All'],
+    rating: 4.8,
+    description: 'Retinol eye cream that targets fine lines and loss of elasticity.',
+    ingredients: ['Retinol', 'Peptides', 'Niacinamide']
+  },
+  {
+    id: 'numbuzin-nad-lifting',
+    name: 'Numbuzin No.9 NAD+ BIO Lifting',
+    brand: 'Numbuzin',
+    price: 30.00,
+    image: 'https://kbeautydropzone.com/cdn/shop/files/numbuzin-skincare-default-title-no-9-nad-bio-lifting-sil-essence-43274302882013.jpg?v=1747302493',
+    category: 'Serums & Ampoules',
+    skinType: ['Mature', 'All'],
+    rating: 4.9,
+    description: 'Advanced lifting serum with NAD+ to revitalize and firm aging skin.',
+    ingredients: ['NAD+', 'Peptides', 'Adenosine']
+  },
+
+  // --- SKIN1004 ---
+  {
+    id: 'centella-matrixyl-ampoule',
+    name: 'SKIN1004 CENTELLA MATRIXYL 10 BOOSTING SHOT AMPOULE',
+    brand: 'SKIN1004',
+    price: 28.00,
+    image: 'https://www.midakbeauty.com/cdn/shop/files/918.webp?v=1764744549',
+    category: 'Serums & Ampoules',
+    skinType: ['Mature', 'All'],
+    rating: 4.9,
+    description: 'Powerful anti-aging ampoule with Matrixyl to boost collagen production.',
+    ingredients: ['Matrixyl 3000', 'Peptides', 'Hyaluronic Acid']
+  },
+  {
+    id: 'centella-niacinamide-ampoule',
+    name: 'SKIN1004 CENTELLA NIACINAMIDE 10 BOOSTING SHOT AMPOULE',
+    brand: 'SKIN1004',
+    price: 22.00,
+    image: 'https://m.media-amazon.com/images/I/61hahY2RwVL._AC_UF350,350_QL80_.jpg',
+    category: 'Serums & Ampoules',
+    skinType: ['Oily', 'Combination', 'Dull'],
+    rating: 4.8,
+    description: 'Brightening ampoule with 10% Niacinamide to refine pores and skin tone.',
+    ingredients: ['Niacinamide 10%', 'Zinc PCA', 'Allantoin']
+  },
+  {
+    id: 'centella-cocoon-mask',
+    name: 'SKIN1004 CENTELLA ZOMBIE BEAUTY COCOON SOAP MASK',
+    brand: 'SKIN1004',
+    price: 6.00,
+    image: 'https://m.media-amazon.com/images/I/61AGWvv0frL._AC_UF1000,1000_QL80_.jpg',
+    category: 'Masks & Treatments',
+    skinType: ['All', 'Large Pores'],
+    rating: 4.7,
+    description: 'Unique soap-based mask that deep cleanses and tightens pores.',
+    ingredients: ['Sericin', 'White Clay', 'Centella Asiatica']
+  },
+  {
+    id: 'centella-mummy-pack',
+    name: 'SKIN1004 CENTELLA ZOMBIE BEAUTY MUMMY PACK & ACTIVATOR KIT',
+    brand: 'SKIN1004',
+    price: 30.00,
+    image: 'https://international-cosmetic.com/cdn/shop/files/mummy_pack.avif?v=1769797195&width=400',
+    category: 'Masks & Treatments',
+    skinType: ['Mature', 'All'],
+    rating: 4.9,
+    description: 'Lifting and tightening mask kit for a youthful, firm complexion.',
+    ingredients: ['Albumin', 'Peptides', 'Adenosine']
+  },
+  {
+    id: 'centella-suncream',
+    name: 'SKIN1004 CENTELLA AIR-FIT SUNCREAM LIGHT',
+    brand: 'SKIN1004',
+    price: 19.00,
+    image: 'https://hbytala.com/cdn/shop/files/CENTELLA-AIR-FIT-SUNCREAM-LIGHT-SPF30-PA-SKIN1004.jpg?v=1715333681&width=2048',
+    category: 'Sun Care',
+    skinType: ['Sensitive', 'Oily', 'Combination'],
+    rating: 4.8,
+    description: 'Lightweight physical sunscreen that soothes skin with Centella Asiatica.',
+    ingredients: ['Centella Asiatica Extract', 'Zinc Oxide', 'Niacinamide']
+  },
+  {
+    id: 'centella-ampoule',
+    name: 'SKIN1004 CENTELLA AMPOULE',
+    brand: 'SKIN1004',
+    price: 15.00,
+    image: 'https://hbytala.com/cdn/shop/files/Madagascar-Centella-Ampoule-SKIN1004-5.jpg?v=1743673612&width=1080',
+    category: 'Serums & Ampoules',
+    skinType: ['All', 'Sensitive', 'Acne-Prone'],
+    rating: 4.9,
+    description: '100% Centella Asiatica extract ampoule to calm and repair the skin barrier.',
+    ingredients: ['Centella Asiatica Extract 100%']
+  },
+  {
+    id: 'centella-oil',
+    name: 'SKIN1004 CENTELLA CLEANSING OIL',
+    brand: 'SKIN1004',
+    price: 21.00,
+    image: 'https://velvetvanity.ca/cdn/shop/files/skin-1004-madagascar-light-cleansing-oil-main-3_1024x1024_db1323e1-1d4d-4d4d-bd81-ee59ee4fcf25.png?v=1768846299&width=800',
+    category: 'Cleansers',
+    skinType: ['All', 'Sensitive'],
+    rating: 4.9,
+    description: 'Gentle cleansing oil that removes makeup and impurities while soothing skin.',
+    ingredients: ['Centella Asiatica Extract', 'MCT Oil', 'Sunflower Seed Oil']
+  },
+  {
+    id: 'centella-cream',
+    name: 'SKIN1004 CENTELLA CREAM',
+    brand: 'SKIN1004',
+    price: 10.00,
+    image: 'https://m.media-amazon.com/images/I/61NPMhGzPRL._AC_UF1000,1000_QL80_.jpg',
+    category: 'Moisturizers',
+    skinType: ['All', 'Sensitive'],
+    rating: 4.8,
+    description: 'Soothing cream that strengthens the skin barrier and provides long-lasting hydration.',
+    ingredients: ['Centella Asiatica Extract', 'Squalane', 'Niacinamide']
+  },
+  {
+    id: 'centella-sun-serum',
+    name: 'SKIN1004 CENTELLA HYALU-CICA WATER-FIT SUN SERUM',
+    brand: 'SKIN1004',
+    price: 19.00,
+    image: 'https://boniik.com.au/cdn/shop/files/skin1004-madagascar-centella-hyalu-cica-water-fit-sun-serum-boniik-best-kbeauty-store-in-australia_grande.jpg?v=1716466765',
+    category: 'Sun Care',
+    skinType: ['All', 'Dry', 'Sensitive'],
+    rating: 4.9,
+    description: 'Hydrating chemical sunscreen with a serum-like texture that leaves no white cast.',
+    ingredients: ['Hyalu-Cica Formula', 'Niacinamide', 'Adenosine']
+  },
+  {
+    id: 'centella-poremizing-foam',
+    name: 'SKIN1004 CENTELLA POREMIZING DEEP CLEANSING FOAM',
+    brand: 'SKIN1004',
+    price: 15.00,
+    image: 'https://static.ladymakeup.pl/img/1/7/174307_800x800_8809913831235.jpg?1750985409',
+    category: 'Cleansers',
+    skinType: ['Oily', 'Combination', 'Large Pores'],
+    rating: 4.7,
+    description: 'Deep cleansing foam that targets pores and removes excess sebum.',
+    ingredients: ['Centella Asiatica Extract', 'Pink Himalayan Salt', 'Kaolin']
+  },
+  {
+    id: 'centella-poremizing-ampoule',
+    name: 'SKIN1004 CENTELLA POREMIZING FRESH AMPOULE',
+    brand: 'SKIN1004',
+    price: 23.00,
+    image: 'https://m.media-amazon.com/images/I/61zILb6PBuL._AC_UF350,350_QL50_.jpg',
+    category: 'Serums & Ampoules',
+    skinType: ['Oily', 'Combination', 'Large Pores'],
+    rating: 4.8,
+    description: 'Fresh ampoule that helps to tighten pores and control oil production.',
+    ingredients: ['Centella Asiatica Extract', 'Pink Himalayan Salt', 'Peptides']
+  },
+  {
+    id: 'centella-probio-cica-eye',
+    name: 'SKIN1004 CENTELLA PROBIO-CICA BAKUCHIOL EYE CREAM',
+    brand: 'SKIN1004',
+    price: 21.00,
+    image: 'https://m.media-amazon.com/images/I/51jW1NzQsiL._AC_UF1000,1000_QL80_.jpg',
+    category: 'Serums & Ampoules',
+    skinType: ['Mature', 'Sensitive', 'Dry'],
+    rating: 4.9,
+    description: 'Nourishing eye cream with Bakuchiol and Probio-Cica for anti-aging care.',
+    ingredients: ['Centella Asiatica Extract', 'Bakuchiol', 'Probiotics']
+  },
+  {
+    id: 'centella-tea-trica-amp',
+    name: 'SKIN1004 CENTELLA TEA-TRICA RELIEF AMPOULE',
+    brand: 'SKIN1004',
+    price: 24.00,
+    image: 'https://hbytala.com/cdn/shop/files/Tea-trica-Relief-Ampoule-100-ML-SKIN1004.jpg?v=1743673698&width=2048',
+    category: 'Serums & Ampoules',
+    skinType: ['Acne-Prone', 'Oily', 'Sensitive'],
+    rating: 4.8,
+    description: 'Relief ampoule that targets acne and inflammation with Tea-Trica formula.',
+    ingredients: ['Centella Asiatica Extract', 'Tea Tree Leaf Water', 'Pine Tree Complex']
+  },
+  {
+    id: 'centella-tone-brightening-amp',
+    name: 'SKIN1004 CENTELLA TONE BRIGHTENING CAPSULE AMP',
+    brand: 'SKIN1004',
+    price: 17.00,
+    image: 'https://faceshine.me/cdn/shop/files/7C09CFFB-1F15-4DED-AC07-53B8D1CD74BF.jpg?v=1736325150',
+    category: 'Serums & Ampoules',
+    skinType: ['All', 'Dull', 'Sensitive'],
+    rating: 4.8,
+    description: 'Brightening ampoule with capsules to improve skin radiance and tone.',
+    ingredients: ['Centella Asiatica Extract', 'Niacinamide', 'Tranexamic Acid']
+  },
+  {
+    id: 'centella-poremizing-stick',
+    name: 'SKIN1004 CENTELLA POREMIZING QUICK CLAY STICK MASK',
+    brand: 'SKIN1004',
+    price: 22.00,
+    image: 'https://m.media-amazon.com/images/I/61UfgKn571L.jpg',
+    category: 'Masks & Treatments',
+    skinType: ['Oily', 'Combination', 'Large Pores'],
+    rating: 4.8,
+    description: 'Quick and easy clay stick mask that deep cleanses pores and removes impurities.',
+    ingredients: ['Centella Asiatica Extract', 'Kaolin', 'Pink Himalayan Salt']
+  },
+
+  // --- SOME BY MI ---
+  {
+    id: 'somebymi-retinol-serum',
+    name: 'SOMEBYMI Retinol Intense Reactivating Serum',
+    brand: 'SOME BY MI',
+    price: 32.00,
+    image: 'https://m.media-amazon.com/images/I/61MjQHvJ5xL._AC_SL1500_.jpg',
+    category: 'Serums & Ampoules',
+    skinType: ['Mature', 'Acne-Prone'],
+    rating: 4.9,
+    description: 'Intense retinol serum that improves skin texture and reduces signs of aging.',
+    ingredients: ['Retinol', 'Retinal', 'Bakuchiol']
+  },
+  {
+    id: 'somebymi-retinol-eye-cream',
+    name: 'SOMEBYMI Retinol Intense Reactivating Eye Cream',
+    brand: 'SOME BY MI',
+    price: 24.00,
+    image: 'https://m.media-amazon.com/images/I/61h+Sd8kPTL._AC_UF1000,1000_QL80_.jpg',
+    category: 'Serums & Ampoules',
+    skinType: ['Mature', 'All'],
+    rating: 4.8,
+    description: 'Targeted eye cream with retinol to reduce fine lines and dark circles.',
+    ingredients: ['Retinol', 'Retinal', 'Niacinamide']
+  },
+  {
+    id: 'somebymi-retinol-trial-kit',
+    name: 'SOMEBYMI Retinol Intense Trial Kit',
+    brand: 'SOME BY MI',
+    price: 22.00,
+    image: 'https://myoras.com/cdn/shop/files/Some_By_Mi_-_Retinol_Intense_Trial_Kit_91d59782-c38b-42cd-bedf-3d9af1a3241a.png?v=1759134241&width=1024',
+    category: 'Masks & Treatments',
+    skinType: ['All'],
+    rating: 4.9,
+    description: 'A trial kit featuring the best of SOME BY MI\'s Retinol Intense line.',
+    ingredients: ['Retinol', 'Retinal', 'Bakuchiol']
+  }
+];
+
+export const BRANDS: Brand[] = [
+  { id: 'abib', name: 'Abib', image: 'https://heyskinday.com/cdn/shop/collections/27_1.png?v=1714508428&width=360', description: 'Minimalist skincare that pursues the natural beauty of skin.' },
+  { id: 'cosrx', name: 'COSRX', image: 'https://kbeauty-cosmetics.com/cdn/shop/collections/Celimax_74877f27-17a7-47ad-878e-20919398c7ee.webp?v=1769188475', description: 'Effective solutions for all skin concerns using skin-friendly ingredients.' },
+  { id: 'anua', name: 'Anua', image: 'https://heyskinday.com/cdn/shop/collections/26_1.png?v=1714507942&width=360', description: 'Focusing on pure ingredients to relax and soothe your skin.' },
+  { id: 'axis-y', name: 'Axis-Y', image: 'https://kbeautybylea.com/cdn/shop/collections/Axis-Y-Logo-558591.png?v=1732970315&width=2048', description: 'Climate-inspired skincare solutions for modern lifestyles.' },
+  { id: 'eqqualberry', name: 'Eqqualberry', image: 'https://myseoulmyskin.com/cdn/shop/collections/Eqqualberry_Brand_Logo.webp?v=1762472734&width=750', description: 'Innovative skincare focusing on skin energy and resilience.' },
+  { id: 'skin1004', name: 'SKIN1004', image: 'https://zohrashop.com/wp-content/uploads/2025/03/310433344_422297736731290_8747799812678856399_n.jpg.webp', description: 'Harnessing the power of raw nature from Madagascar.' },
+];
+
+export const CATEGORIES: Category[] = [
+  { id: '1', name: 'Cleansers', image: 'https://picsum.photos/seed/cleanser-cat/400/400' },
+  { id: '2', name: 'Toners & Essences', image: 'https://picsum.photos/seed/toner-cat/400/400' },
+  { id: '3', name: 'Serums & Ampoules', image: 'https://picsum.photos/seed/serum-cat/400/400' },
+  { id: '4', name: 'Moisturizers', image: 'https://picsum.photos/seed/moist-cat/400/400' },
+  { id: '5', name: 'Sun Care', image: 'https://picsum.photos/seed/sun-cat/400/400' },
+  { id: '6', name: 'Masks & Treatments', image: 'https://picsum.photos/seed/mask-cat/400/400' },
+];
+
+export const REVIEWS: Review[] = [
+  { id: '1', user: 'Min-ji Kim', rating: 5, comment: 'My skin literally glows after using Seoul Aura products!', image: 'https://i.pinimg.com/736x/48/50/b9/4850b9ccf312520e6c0edee0aea8bc5d.jpg' },
+  { id: '2', user: 'Sarah J.', rating: 5, comment: 'The packaging is so aesthetic and the serum is amazing.', image: 'https://i.pinimg.com/1200x/9c/6d/01/9c6d0138b84f469bc580e09e967246ac.jpg' },
+  { id: '3', user: 'Elena R.', rating: 4, comment: 'Love the lip tint! It stays on all day without drying.', image: 'https://i.pinimg.com/736x/44/7a/80/447a80ed04cbb673a417d46d3c173048.jpg' },
+];
