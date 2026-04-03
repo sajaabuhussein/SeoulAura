@@ -55,13 +55,7 @@ export const Footer = ({ onPageChange }: FooterProps) => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-white/40">
-        <p>© 2026 Seoul Aura. All rights reserved.</p>
-        <div className="flex gap-8">
-          <button onClick={() => onPageChange('privacy')} className="hover:text-white transition-colors">Privacy Policy</button>
-          <button onClick={() => onPageChange('terms')} className="hover:text-white transition-colors">Terms of Service</button>
-        </div>
-      </div>
+
     </footer>
   );
 };

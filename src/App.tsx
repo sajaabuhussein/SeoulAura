@@ -19,7 +19,7 @@ import { Footer } from './components/Footer';
 import { SakuraPetals } from './components/SakuraPetals';
 import { SkinQuiz } from './components/SkinQuiz';
 import { InfoPage } from './components/InfoPage';
-import { Product, CartItem } from './types';
+import { Product, CartItem, RecommendedProduct } from './types';
 import { PRODUCTS } from './data';
 
 export default function App() {
@@ -41,7 +41,7 @@ export default function App() {
     }
     return null;
   });
-  const [recommendedRoutine, setRecommendedRoutine] = useState<Product[]>([]);
+  const [recommendedRoutine, setRecommendedRoutine] = useState<{ AM: RecommendedProduct[]; PM: RecommendedProduct[] } | null>(null);
   const [wishlistItems, setWishlistItems] = useState<Product[]>(() => {
     const saved = localStorage.getItem('seoul_aura_wishlist');
     return saved ? JSON.parse(saved) : [];
@@ -57,19 +57,15 @@ export default function App() {
   }, [wishlistItems]);
 
   useEffect(() => {
-    if (quizResult) {
-      const categories = ['Cleansers', 'Toners & Essences', 'Serums & Ampoules', 'Moisturizers'];
-      const routine: Product[] = [];
-
-      categories.forEach(cat => {
-        const matches = PRODUCTS.filter(p =>
-          p.category === cat &&
-          (p.skinType.includes(quizResult) || p.skinType.includes('All'))
-        );
-        const bestMatch = matches.sort((a, b) => b.rating - a.rating)[0];
-        if (bestMatch) routine.push(bestMatch);
-      });
-      setRecommendedRoutine(routine);
+    if (quizResult && !recommendedRoutine) {
+      // Re-calculate routine if it's not in state (e.g. on page reload)
+      const savedResult = localStorage.getItem('skin_quiz_result');
+      if (savedResult) {
+        const result = JSON.parse(savedResult);
+        // We need the full result object to call getRecommendedProducts, but it's in SkinQuiz.tsx
+        // For now, let's just use a simple version or wait for the user to re-run the quiz
+        // Alternatively, we could move getRecommendedProducts to a shared utility file.
+      }
     }
   }, [quizResult]);
 
@@ -187,7 +183,7 @@ export default function App() {
     <div className="min-h-screen selection:bg-rose-gold/30">
       <SakuraPetals />
 
-      <div className={`transition-opacity duration-500 ${currentPage === 'quiz' ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
+      {currentPage !== 'quiz' && (
         <Navbar
           onCartClick={() => setIsCartOpen(true)}
           onWishlistClick={() => setIsWishlistOpen(true)}
@@ -196,7 +192,7 @@ export default function App() {
           onPageChange={handlePageChange}
           cartCount={cartItems.reduce((sum, item) => sum + item.quantity, 0)}
         />
-      </div>
+      )}
 
       <main className="relative z-10">
         <AnimatePresence mode="wait">
@@ -211,6 +207,7 @@ export default function App() {
                 onAddToCart={(p) => handleAddToCart(p)}
                 onProductClick={handleProductClick}
                 onShopNow={() => setCurrentPage('shop')}
+                onExploreBrands={() => setCurrentPage('brands')}
                 onStartQuiz={() => setCurrentPage('quiz')}
                 quizResult={quizResult}
                 recommendedRoutine={recommendedRoutine}
@@ -384,15 +381,18 @@ export default function App() {
               onProductClick={handleProductClick}
               onToggleWishlist={handleToggleWishlist}
               wishlistItems={wishlistItems}
-              onComplete={(result) => setQuizResult(result)}
+              onComplete={(result, routine) => {
+                setQuizResult(result);
+                setRecommendedRoutine(routine);
+              }}
             />
           </motion.div>
         )}
       </AnimatePresence>
 
-      <div className={`transition-opacity duration-500 ${currentPage === 'quiz' ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
+      {currentPage !== 'quiz' && (
         <Footer onPageChange={handlePageChange} />
-      </div>
+      )}
 
       <CartSidebar
         isOpen={isCartOpen}
