@@ -127,6 +127,30 @@ export const PRODUCTS: Product[] = [
     ingredients: ['Azelaic Acid 10%', 'Hyaluronic Acid', 'Centella Asiatica'],
     isNew: true
   },
+  {
+    id: 'anua-pdrn-capsule-mist',
+    name: 'Anua PDRN Hyaluronic Acid Hydrating Capsule Mist',
+    brand: 'Anua',
+    price: 29.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/Anua-PDRNHyaluronicAcidHydratingCapsuleMist100ml.webp?v=1787160227&width=800',
+    category: 'Toners & Essences',
+    skinType: ['Dry', 'Dehydrated', 'Dull'],
+    description: 'A fine oil-essence mist with 2,000ppm PDRN and hyaluronic acid for instant, long-lasting hydration and glow — wearable over makeup.',
+    ingredients: ['PDRN', 'Hyaluronic Acid', 'Hydrolyzed Collagen']
+  },
+
+  // --- Arencia ---
+  {
+    id: 'arencia-vitamin-c-booster',
+    name: 'Arencia Vitamin C Booster Shot 30ml',
+    brand: 'Arencia',
+    price: 24.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/Vitamin-C-Booster-Shot-30ml-ARENCIA.webp?v=1787153807&width=800',
+    category: 'Serums & Ampoules',
+    skinType: ['All', 'Dull'],
+    description: 'A lightweight, fast-absorbing antioxidant serum that revives tired-looking skin and supports the barrier.',
+    ingredients: ['Vitamin C', 'Glutathione', 'Niacinamide']
+  },
 
   // --- Axis-Y ---
   {
@@ -152,6 +176,30 @@ export const PRODUCTS: Product[] = [
     rating: 4.9,
     description: 'A niacinamide-based serum that corrects dark spots and improves uneven skin tone.',
     ingredients: ['Niacinamide 5%', 'Papaya', 'Sea Buckthorn']
+  },
+  {
+    id: 'axis-y-vegan-collagen-eye-serum',
+    name: 'Axis-Y Vegan Collagen Eye Serum 10ml',
+    brand: 'Axis-Y',
+    price: 22.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/BDFDFAAD-43A7-4579-A786-7D5B479AE591.jpg?v=1771859016&width=800',
+    category: 'Serums & Ampoules',
+    skinType: ['All', 'Sensitive'],
+    description: 'A cooling roll-on eye serum with vegan collagen that targets fine lines, puffiness and dark circles.',
+    ingredients: ['Vegan Collagen', 'Niacinamide', 'Adenosine']
+  },
+
+  // --- Beauty of Joseon ---
+  {
+    id: 'boj-relief-sun',
+    name: 'Beauty of Joseon Relief Sun: Rice + Probiotics SPF50+ PA++++',
+    brand: 'Beauty of Joseon',
+    price: 24.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/BOJReliefSunRiceProbiotics.webp?v=1787153630&width=800',
+    category: 'Sun Care',
+    skinType: ['All', 'Dry', 'Sensitive'],
+    description: 'The cult creamy sunscreen that feels like a moisturizer — lightweight, non-sticky and enriched with 30% rice extract.',
+    ingredients: ['Rice Extract 30%', 'Grain Ferment Extracts']
   },
 
   // --- Biodance ---
@@ -182,6 +230,19 @@ export const PRODUCTS: Product[] = [
     description: 'Retinal booster that tightens pores and improves skin texture.',
     ingredients: ['Retinal', 'Adenosine', 'Peptides'],
     isNew: true
+  },
+
+  // --- Centellian 24 ---
+  {
+    id: 'centellian-madeca-time-reverse',
+    name: 'Centellian 24 Madeca Cream Time Reverse',
+    brand: 'Centellian 24',
+    price: 25.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/Centellian24Madecacreamtimereverse.webp?v=1787153497&width=800',
+    category: 'Moisturizers',
+    skinType: ['Mature', 'Sensitive'],
+    description: 'An anti-aging derma cream with Centella TECA and a Madeca complex that soothes, strengthens the barrier and targets fine lines and dullness.',
+    ingredients: ['Centella Asiatica', 'Active-TECA', 'Madeca Complex']
   },
 
   // --- COSRX ---
@@ -367,6 +428,127 @@ export const PRODUCTS: Product[] = [
     description: 'Sheet mask dipped in snail mucin to provide deep hydration and repair.',
     ingredients: ['Snail Secretion Filtrate', 'Glycerin', 'Arginine']
   },
+  {
+    id: 'cosrx-peptide-collagen-hydrogel-mask',
+    name: 'COSRX The Peptide Collagen Lifting Glow Hydrogel Mask',
+    brand: 'COSRX',
+    price: 5.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/Cosrxpeptidecollagenhydrogeleyepatch.jpg?v=1787160016&width=800',
+    category: 'Masks & Treatments',
+    skinType: ['Mature', 'Dull'],
+    description: 'A hydrogel mask with 6 peptides and low-molecular collagen that turns transparent as it delivers actives, leaving skin firmer and radiant.',
+    ingredients: ['6 Peptides', 'Low Molecular Collagen', 'Niacinamide']
+  },
+  {
+    id: 'cosrx-peptide-collagen-eye-patch',
+    name: 'COSRX The Peptide Collagen Hydrogel Eye Patch',
+    brand: 'COSRX',
+    price: 23.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/Peptidecollagenliftingglowhydrogelmask.jpg?v=1787159870&width=800',
+    category: 'Masks & Treatments',
+    skinType: ['All', 'Mature'],
+    description: '10-minute hydrogel eye patches with 4 peptides, collagen and caffeine to depuff, smooth fine lines and brighten dark circles.',
+    ingredients: ['4 Peptides', 'Collagen', 'Caffeine']
+  },
+  {
+    id: 'cosrx-aloe-tone-up-sunscreen',
+    name: 'COSRX Aloe 54.2 Aqua Tone-Up Sunscreen',
+    brand: 'COSRX',
+    price: 14.50,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/A26746C9-F6D2-438F-ADBB-96354A1AA5BC.jpg?v=1770537318&width=800',
+    category: 'Sun Care',
+    skinType: ['All', 'Dull'],
+    description: 'A lightweight SPF50+ PA++++ tone-up sunscreen with 54.2% aloe that soothes and leaves a soft, non-greasy finish.',
+    ingredients: ['Aloe Leaf Water 54.2%', 'Vitamin B12', 'Niacinamide']
+  },
+  {
+    id: 'cosrx-hyaluronic-essence',
+    name: 'COSRX Hyaluronic Acid Hydra Power Essence',
+    brand: 'COSRX',
+    price: 25.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/CosrxHyaluronicacidHydraPowerEssence.jpg?v=1769713318&width=800',
+    category: 'Toners & Essences',
+    skinType: ['Dry', 'Dehydrated'],
+    description: 'An oil-free gel essence with high-purity hyaluronic acid that keeps skin plump, soft and hydrated.',
+    ingredients: ['Sodium Hyaluronate']
+  },
+  {
+    id: 'cosrx-oil-free-lotion',
+    name: 'COSRX Oil-Free Ultra-Moisturizing Lotion',
+    brand: 'COSRX',
+    price: 25.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/CosrxoilfreeultramoisturizingLotion.jpg?v=1769711551&width=800',
+    category: 'Moisturizers',
+    skinType: ['Oily', 'Combination', 'Sensitive'],
+    description: 'A weightless, fragrance-free daily lotion with tea-tree terpineol that restores moisture and soothes irritated skin.',
+    ingredients: ['Tea Tree Terpineol']
+  },
+  {
+    id: 'cosrx-retinol-05-oil',
+    name: 'COSRX The Retinol 0.5 Oil',
+    brand: 'COSRX',
+    price: 27.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/TheRetinol0.5Oil.jpg?v=1769711152&width=800',
+    category: 'Serums & Ampoules',
+    skinType: ['Mature', 'Dry'],
+    description: 'A waterless 0.5% pure retinol oil for intermediate users targeting loss of elasticity, fine lines and dryness.',
+    ingredients: ['Retinol 0.5%']
+  },
+  {
+    id: 'cosrx-good-morning-cleanser',
+    name: 'COSRX Low pH Good Morning Gel Cleanser',
+    brand: 'COSRX',
+    price: 15.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/LowpHGoodMorningGelCleanser.jpg?v=1769710535&width=800',
+    category: 'Cleansers',
+    skinType: ['All', 'Sensitive'],
+    description: 'A mildly acidic gel cleanser that cleans without stripping, protecting the barrier and pH balance.',
+    ingredients: ['Mildly Acidic pH']
+  },
+  {
+    id: 'cosrx-vitamin-c-23-serum',
+    name: 'COSRX The Vitamin C 23 Serum',
+    brand: 'COSRX',
+    price: 25.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/9FBF2B97-4351-4314-B3EF-FB3FB7D317AC.jpg?v=1770536958&width=800',
+    category: 'Serums & Ampoules',
+    skinType: ['Dull', 'Mature'],
+    description: 'A high-strength 23% pure vitamin C serum for experienced users — evens tone, refines texture and boosts elasticity.',
+    ingredients: ['Pure Vitamin C 23%']
+  },
+  {
+    id: 'cosrx-salicylic-cleanser',
+    name: 'COSRX Salicylic Acid Daily Gentle Cleanser',
+    brand: 'COSRX',
+    price: 7.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/609BC696-63EC-4850-B57F-4DD714531D5F.jpg?v=1770537076&width=800',
+    category: 'Cleansers',
+    skinType: ['Oily', 'Acne-Prone'],
+    description: 'A creamy foaming BHA cleanser that unclogs pores and helps prevent blackheads without a tight feel.',
+    ingredients: ['Salicylic Acid (BHA)']
+  },
+  {
+    id: 'cosrx-6-peptide-booster',
+    name: 'COSRX The 6 Peptide Skin Booster Serum',
+    brand: 'COSRX',
+    price: 25.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/F0CCE116-F96E-498A-A94A-7DED0B6947F5.jpg?v=1770537458&width=800',
+    category: 'Serums & Ampoules',
+    skinType: ['All', 'Mature'],
+    description: 'A first-step serum with 6 peptides that improves pores, firmness, fine lines, texture and tone.',
+    ingredients: ['6 Peptides']
+  },
+  {
+    id: 'cosrx-clear-fit-patch',
+    name: 'COSRX Clear Fit Master Patch',
+    brand: 'COSRX',
+    price: 6.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/ClearFitMasterPatch.jpg?v=1769705806&width=800',
+    category: 'Masks & Treatments',
+    skinType: ['Acne-Prone'],
+    description: 'Ultra-thin matte hydrocolloid spot patches that blend under makeup while protecting and healing blemishes.',
+    ingredients: ['Hydrocolloid']
+  },
 
   // --- Dr. Althea ---
   {
@@ -476,6 +658,120 @@ export const PRODUCTS: Product[] = [
     rating: 4.9,
     description: 'Rejuvenating cream that targets deep wrinkles and loss of elasticity.',
     ingredients: ['PDRN', 'Peptides', 'Collagen']
+  },
+  {
+    id: 'dr-althea-345-cream-mask',
+    name: 'Dr. Althea 345 Relief Cream Mask',
+    brand: 'Dr. Althea',
+    price: 6.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/dralthea345mask.jpg?v=1787156862&width=800',
+    category: 'Masks & Treatments',
+    skinType: ['Sensitive', 'Acne-Prone'],
+    description: 'A vegan cellulose sheet mask carrying the 345 Relief formula to rapidly calm post-blemish skin and boost hydration.',
+    ingredients: ['Tea Tree Leaf Water 30%', 'Centella Asiatica']
+  },
+  {
+    id: 'dr-althea-gentle-vitamin-c',
+    name: 'Dr. Althea Gentle Vitamin C Serum 30ml',
+    brand: 'Dr. Althea',
+    price: 29.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/Dr.AltheaGentleVitaminCserum.jpg?v=1769628520&width=800',
+    category: 'Serums & Ampoules',
+    skinType: ['Sensitive', 'Acne-Prone', 'Dull'],
+    description: 'A beginner-friendly, acne-safe vitamin C serum that brightens dark spots with a fresh, non-sticky finish.',
+    ingredients: ['Sea Buckthorn 20%', 'Green Tea Leaf Water']
+  },
+
+  // --- Dr.Melaxin ---
+  {
+    id: 'dr-melaxin-dark-spot-eye-cream',
+    name: 'Dr.Melaxin Calcium Dark Spot Cover Eye Cream',
+    brand: 'Dr.Melaxin',
+    price: 28.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/Dr.MelaximCalciumDarkSpotCoverEyeCream.jpg?v=1787151781&width=800',
+    category: 'Moisturizers',
+    skinType: ['Dull', 'Mature'],
+    description: 'A beige-tinted eye cream that instantly blurs dark circles while brightening and firming the under-eye area.',
+    ingredients: ['Calcium', 'Reboric']
+  },
+  {
+    id: 'dr-melaxin-calcium-multi-balm',
+    name: 'Dr.Melaxin Cemenrete Calcium Multi Balm',
+    brand: 'Dr.Melaxin',
+    price: 27.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/Dr.MelaxinCemenreteCalciumMultiBalm.jpg?v=1787151507&width=800',
+    category: 'Moisturizers',
+    skinType: ['Dry', 'Dehydrated'],
+    description: 'A travel-friendly balm stick that delivers targeted hydration and radiance to dry or delicate areas throughout the day.',
+    ingredients: ['Bio-Calcium', 'Collagen', 'Adenosine']
+  },
+  {
+    id: 'dr-melaxin-black-rice-peel-shot',
+    name: 'Dr.Melaxin Peel Shot Exfoliating Black Rice Ampoule',
+    brand: 'Dr.Melaxin',
+    price: 28.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/Dr.MelaxinpeelshotexfoliatingBlackriceampoul80ml.webp?v=1787151395&width=800',
+    category: 'Serums & Ampoules',
+    skinType: ['Oily', 'Dull', 'Large Pores'],
+    description: 'A gommage-style exfoliating ampoule with AHA, BHA and black rice that clears pores and brightens dull, uneven skin.',
+    ingredients: ['Black Rice Extract', 'AHA/BHA', 'Niacinamide']
+  },
+  {
+    id: 'dr-melaxin-white-rice-peel-shot',
+    name: 'Dr.Melaxin Peel Shot Exfoliating White Rice Ampoule',
+    brand: 'Dr.Melaxin',
+    price: 28.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/Dr.Melaxinpeelshotexfoliatingwhitericeampoul80ml.webp?v=1787151053&width=800',
+    category: 'Serums & Ampoules',
+    skinType: ['Dull', 'Normal'],
+    description: 'An exfoliating, brightening ampoule with white rice and chemical exfoliants that renews skin while keeping it hydrated — for face and body.',
+    ingredients: ['White Rice Extract', 'AHA/BHA', 'Rice Bran Water']
+  },
+
+  // --- epii ---
+  {
+    id: 'epii-new-skin-toner',
+    name: 'epii New Skin Toner Snow Mushroom & PHA',
+    brand: 'epii',
+    price: 25.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/EpiiNewSkinTonerSnowMushroom.webp?v=1787149524&width=800',
+    category: 'Toners & Essences',
+    skinType: ['All', 'Sensitive', 'Dull'],
+    description: 'A watery gel toner with 5% PHA and snow mushroom that gently refines texture and leaves an instant silky glow.',
+    ingredients: ['PHA 5%', 'Snow Mushroom', 'Hyaluronic Acid']
+  },
+  {
+    id: 'epii-double-up-ectoin-panthenol',
+    name: 'epii Double Up Cream Ectoin & Panthenol',
+    brand: 'epii',
+    price: 29.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/Double-Up-Cream-EctoinEpii.webp?v=1787148962&width=800',
+    category: 'Moisturizers',
+    skinType: ['Sensitive', 'Redness', 'Dry'],
+    description: 'A dual-texture cream that calms reactive skin and strengthens the barrier with ectoin, 3% panthenol and 15% squalane.',
+    ingredients: ['Ectoin', 'Panthenol 3%', 'Squalane 15%']
+  },
+  {
+    id: 'epii-hpr-pro-shot',
+    name: 'epii HPR Pro-Shot Retinoid Serum',
+    brand: 'epii',
+    price: 29.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/EpiiHPRProshot.webp?v=1787149209&width=800',
+    category: 'Serums & Ampoules',
+    skinType: ['Mature', 'Normal'],
+    description: 'A triple-retinoid night serum (HPR, retinal, retinol) with a built-in ectoin soothing system for firmness with less irritation.',
+    ingredients: ['HPR 0.3%', 'Retinal 0.1%', 'Ectoin']
+  },
+  {
+    id: 'epii-double-up-nad-txa',
+    name: 'epii Double Up Cream NAD+ NMN & TXA',
+    brand: 'epii',
+    price: 29.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/Double-Up-Cream-NADNMN-TXA-EPII.webp?v=1787148741&width=800',
+    category: 'Moisturizers',
+    skinType: ['Dull', 'Mature'],
+    description: 'A soft-pink dual-action cream with NAD+, NMN and TXA that firms, evens tone and fades dark spots, plus 15% squalane.',
+    ingredients: ['NAD+', 'NMN', 'Tranexamic Acid']
   },
 
   // --- Eqqualberry ---
@@ -638,6 +934,215 @@ export const PRODUCTS: Product[] = [
     rating: 4.9,
     description: 'Nourishing capsule cream with PDRN to strengthen the skin barrier and provide deep hydration.',
     ingredients: ['PDRN', 'Ceramides', 'Hyaluronic Acid']
+  },
+  {
+    id: 'medicube-kojic-turmeric-pad',
+    name: 'Medicube Kojic Acid Turmeric Pad',
+    brand: 'Medicube',
+    price: 27.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/398176A3-4051-45CB-8003-574EF6B9CB1D.jpg?v=1787159596&width=800',
+    category: 'Masks & Treatments',
+    skinType: ['Dull', 'Oily'],
+    description: 'Brightening toner pads with kojic acid, turmeric and gentle AHA/BHA that fade dark spots and smooth rough texture.',
+    ingredients: ['Kojic Acid', 'Turmeric', 'Glycolic Acid']
+  },
+  {
+    id: 'medicube-deep-lifting-eye-cream',
+    name: 'Medicube Deep Lifting Peptide Eye Cream',
+    brand: 'Medicube',
+    price: 28.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/3F1E8CFF-922A-4FA6-82F2-860F65C7BCE6.jpg?v=1787159351&width=800',
+    category: 'Moisturizers',
+    skinType: ['Mature', 'Dry'],
+    description: 'A clinically tested eye cream with 20,000ppm peptide complex that targets sagging, puffiness and crow\'s feet.',
+    ingredients: ['Peptide Complex', 'Collagen', 'Elastin']
+  },
+  {
+    id: 'medicube-pdrn-multi-balm',
+    name: 'Medicube PDRN Pink Collagen Volume Multi Balm',
+    brand: 'Medicube',
+    price: 26.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/F838E446-7BC9-4941-8DC8-859D977BAFBF.jpg?v=1787158467&width=800',
+    category: 'Moisturizers',
+    skinType: ['Dry', 'Mature'],
+    description: 'A fragrance-free melting balm stick for on-the-go glow and line care — non-sticky and gentle enough for delicate areas.',
+    ingredients: ['PDRN', 'Collagen', 'Peptides']
+  },
+  {
+    id: 'medicube-pdrn-vita-coating-mask',
+    name: 'Medicube PDRN Pink Vita Coating Mask',
+    brand: 'Medicube',
+    price: 4.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/A89D5C80-594A-464B-A255-75927B11C7BE.jpg?v=1787158188&width=800',
+    category: 'Masks & Treatments',
+    skinType: ['Dull', 'Dry'],
+    description: 'A skin-fit sheet mask with PDRN, hydrolyzed collagen and Vitamin B12 for firmer, smoother, glowing skin.',
+    ingredients: ['PDRN', 'Hydrolyzed Collagen', 'Vitamin B12']
+  },
+  {
+    id: 'medicube-pdrn-lip-sleeping-mask',
+    name: 'Medicube PDRN Pink Lip Sleeping Mask',
+    brand: 'Medicube',
+    price: 19.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/A4E28377-4BF6-4617-AB75-70C0EE3213D7.jpg?v=1787157816&width=800',
+    category: 'Masks & Treatments',
+    skinType: ['All'],
+    description: 'A non-sticky overnight lip mask that locks in moisture and improves lip elasticity for plump, smooth lips.',
+    ingredients: ['Salmon PDRN', 'Collagen', 'Shea Butter']
+  },
+  {
+    id: 'medicube-pdrn-collagen-gel-mask',
+    name: 'Medicube PDRN Pink Collagen Gel Mask (4ea)',
+    brand: 'Medicube',
+    price: 7.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/11.jpg?v=1780544295&width=800',
+    category: 'Masks & Treatments',
+    skinType: ['All', 'Dull'],
+    description: 'Colour-changing gel masks with salmon PDRN and low-molecular collagen for elasticity and a luminous glow.',
+    ingredients: ['Salmon PDRN', 'Low Molecular Collagen', 'Niacinamide']
+  },
+  {
+    id: 'medicube-hypochlorous-spray',
+    name: 'Medicube Hypochlorous Acid Daily Facial Spray',
+    brand: 'Medicube',
+    price: 24.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/10.jpg?v=1780544137&width=800',
+    category: 'Toners & Essences',
+    skinType: ['Sensitive', 'Redness', 'Acne-Prone'],
+    description: 'A pH-balanced HOCl mist that calms irritation, reduces redness and hydrates — gentle enough for the most sensitive skin.',
+    ingredients: ['Hypochlorous Acid', 'Panthenol', 'Glycerin']
+  },
+  {
+    id: 'medicube-hyaluronic-capsule-cream',
+    name: 'Medicube Hyaluronic Moisturizing Capsule Cream',
+    brand: 'Medicube',
+    price: 26.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/9.jpg?v=1780544055&width=800',
+    category: 'Moisturizers',
+    skinType: ['All', 'Dry', 'Sensitive'],
+    description: 'A non-comedogenic capsule cream with ultra-low molecular hyaluronic acid and ceramides for deep, dewy hydration.',
+    ingredients: ['Hyaluronic Acid', 'Ceramides', 'Niacinamide']
+  },
+  {
+    id: 'medicube-txa-capsule-cream',
+    name: 'Medicube TXA Niacinamide Capsule Cream',
+    brand: 'Medicube',
+    price: 25.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/8.jpg?v=1780543978&width=800',
+    category: 'Moisturizers',
+    skinType: ['Dull', 'Combination'],
+    description: 'A breathable gel cream with encapsulated TXA and niacinamide that brightens and balances tone for a glass-skin finish.',
+    ingredients: ['Tranexamic Acid', 'Niacinamide', 'Ceramide']
+  },
+  {
+    id: 'medicube-txa-niacinamide-serum',
+    name: 'Medicube TXA Niacinamide 15 Serum',
+    brand: 'Medicube',
+    price: 25.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/7.jpg?v=1780543914&width=800',
+    category: 'Serums & Ampoules',
+    skinType: ['All', 'Dull'],
+    description: 'A brightening serum with 5% tranexamic acid and 10% niacinamide that fades dark spots and acne marks.',
+    ingredients: ['Tranexamic Acid 5%', 'Niacinamide 10%', 'Panthenol']
+  },
+  {
+    id: 'medicube-kojic-turmeric-serum',
+    name: 'Medicube Kojic Acid Turmeric Niacinamide Serum',
+    brand: 'Medicube',
+    price: 25.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/6.jpg?v=1780543829&width=800',
+    category: 'Serums & Ampoules',
+    skinType: ['Dull', 'Sensitive'],
+    description: 'A glow-capsule serum with kojic acid and turmeric that targets dark spots and post-blemish marks while soothing.',
+    ingredients: ['Kojic Acid', 'Turmeric', 'Niacinamide']
+  },
+  {
+    id: 'medicube-kojic-wrapping-mask',
+    name: 'Medicube Kojic Acid Turmeric Overnight Wrapping Mask',
+    brand: 'Medicube',
+    price: 24.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/5.jpg?v=1780543755&width=800',
+    category: 'Masks & Treatments',
+    skinType: ['Dull'],
+    description: 'A gentle peel-off overnight mask with turmeric, kojic acid and collagen for brighter, smoother skin by morning.',
+    ingredients: ['Kojic Acid', 'Turmeric', 'Hydrolyzed Collagen']
+  },
+  {
+    id: 'medicube-blackhead-mud-mask',
+    name: 'Medicube Zero Pore Blackhead Mud Mask',
+    brand: 'Medicube',
+    price: 22.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/4.jpg?v=1780543688&width=800',
+    category: 'Masks & Treatments',
+    skinType: ['Oily', 'Large Pores'],
+    description: 'A gentle mud mask with 5 clays of different particle sizes that draws out blackheads, sebum and dead skin.',
+    ingredients: ['5 Clays', 'AHA/BHA/PHA']
+  },
+  {
+    id: 'medicube-pdrn-eye-cream',
+    name: 'Medicube PDRN Pink Peptide Eye Cream',
+    brand: 'Medicube',
+    price: 24.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/3.jpg?v=1780543598&width=800',
+    category: 'Moisturizers',
+    skinType: ['Mature', 'Dull'],
+    description: 'A lightweight yet rich eye cream with PDRN and multi-peptides that targets fine lines, puffiness and dark circles.',
+    ingredients: ['PDRN', 'Peptides', 'Niacinamide']
+  },
+  {
+    id: 'medicube-collagen-glow-serum',
+    name: 'Medicube Collagen Glow Booster Serum',
+    brand: 'Medicube',
+    price: 26.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/2.jpg?v=1780543481&width=800',
+    category: 'Serums & Ampoules',
+    skinType: ['All', 'Dull'],
+    description: 'A milky serum with collagen, niacinamide and ceramides for cushiony, supple skin and a glass-like glow.',
+    ingredients: ['Hydrolyzed Collagen', 'PDRN', 'Ceramides']
+  },
+  {
+    id: 'medicube-caffeine-wrapping-mask',
+    name: 'Medicube PDRN Pink Caffeine Night Wrapping Mask',
+    brand: 'Medicube',
+    price: 25.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/1.jpg?v=1780543310&width=800',
+    category: 'Masks & Treatments',
+    skinType: ['All', 'Mature'],
+    description: 'A shimmering peel-off overnight mask with PDRN and caffeine that firms contours and plumps tired skin.',
+    ingredients: ['Salmon PDRN', 'Caffeine', 'Collagen']
+  },
+  {
+    id: 'medicube-age-r-vita-c-pro',
+    name: 'Medicube AGE-R Vita C Pro',
+    brand: 'Medicube',
+    price: 24.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/DD532F9D-A97D-43B5-9BD7-71D112A0471A.jpg?v=1771859333&width=800',
+    category: 'Serums & Ampoules',
+    skinType: ['All', 'Dull'],
+    description: 'A lightweight vitamin C capsule ampoule that brightens dark spots, refines texture and boosts elasticity.',
+    ingredients: ['Vitamin C 21%', 'Turmeric', 'Allantoin']
+  },
+  {
+    id: 'medicube-c-capsule-cream',
+    name: 'Medicube C Capsule Cream',
+    brand: 'Medicube',
+    price: 25.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/MedicubeCCapsuleCream.jpg?v=1769632799&width=800',
+    category: 'Moisturizers',
+    skinType: ['Dull', 'All'],
+    description: 'A dual-texture vitamin capsule cream with 50% sea buckthorn, niacinamide and vitamin C that targets spots and dullness.',
+    ingredients: ['Sea Buckthorn 50%', 'Niacinamide 5%', 'Vitamin C']
+  },
+  {
+    id: 'medicube-zero-exosome-shot',
+    name: 'Medicube Zero Exosome Shot 2,000 PPM',
+    brand: 'Medicube',
+    price: 25.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/MedicubeZeroExosomeShot2_000PPM.jpg?v=1769632686&width=800',
+    category: 'Serums & Ampoules',
+    skinType: ['Large Pores', 'Dull'],
+    description: 'A spicule booster that delivers exosomes deep into pores to refine texture and revitalize skin.',
+    ingredients: ['Exosome', 'Spicule', 'Niacinamide']
   },
 
   // --- Numbuzin ---
@@ -847,6 +1352,215 @@ export const PRODUCTS: Product[] = [
     description: 'Quick and easy clay stick mask that deep cleanses pores and removes impurities.',
     ingredients: ['Centella Asiatica Extract', 'Kaolin', 'Pink Himalayan Salt']
   },
+  {
+    id: 'skin1004-quick-calming-pad',
+    name: 'SKIN1004 CENTELLA QUICK CALMING PAD',
+    brand: 'SKIN1004',
+    price: 22.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/CentellaQuickCamlingPad70pads.jpg?v=1787161389&width=800',
+    category: 'Masks & Treatments',
+    skinType: ['Sensitive', 'Redness'],
+    description: 'Triple-layer, essence-soaked toner pads with Centella and Panthenol that soothe and hydrate irritated skin in minutes — an easier alternative to a sheet mask.',
+    ingredients: ['Centella Asiatica', 'Panthenol']
+  },
+  {
+    id: 'skin1004-ampoule-foam',
+    name: 'SKIN1004 CENTELLA AMPOULE FOAM',
+    brand: 'SKIN1004',
+    price: 15.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/CentellaAmpouleFoam.jpg?v=1787161215&width=800',
+    category: 'Cleansers',
+    skinType: ['All', 'Combination'],
+    description: 'A rich, pH 5 foaming cleanser that lifts makeup, fine dust and excess sebum without stripping, leaving skin soothed and balanced.',
+    ingredients: ['Centella Asiatica', 'Baking Soda', 'Coconut-Derived Surfactants']
+  },
+  {
+    id: 'skin1004-poremizing-clear-toner',
+    name: 'SKIN1004 CENTELLA POREMIZING CLEAR TONER',
+    brand: 'SKIN1004',
+    price: 19.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/centellaporemizingcleartoner.jpg?v=1787161052&width=800',
+    category: 'Toners & Essences',
+    skinType: ['Oily', 'Large Pores'],
+    description: 'An exfoliating toner with mineral salts and 4 acids (AHA, BHA, PHA, LHA) that clears pores, removes dead skin and controls excess sebum.',
+    ingredients: ['Centella Asiatica', 'Salicylic Acid', 'Gluconolactone']
+  },
+  {
+    id: 'skin1004-probio-cica-enrich-cream',
+    name: 'SKIN1004 CENTELLA PROBIO-CICA ENRICH CREAM',
+    brand: 'SKIN1004',
+    price: 24.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/CentellaEnrichCream.jpg?v=1787160718&width=800',
+    category: 'Moisturizers',
+    skinType: ['Dry', 'Mature'],
+    description: 'A thick, smooth cream with fermented Centella, shea butter and Ceramide NP that delivers rich moisture without feeling heavy or sticky.',
+    ingredients: ['Fermented Centella', 'Ceramide NP', 'Shea Butter']
+  },
+  {
+    id: 'skin1004-tea-trica-b5-cream',
+    name: 'SKIN1004 CENTELLA TEA-TRICA B5 CREAM',
+    brand: 'SKIN1004',
+    price: 21.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/15.jpg?v=1780545008&width=800',
+    category: 'Moisturizers',
+    skinType: ['Acne-Prone', 'Sensitive', 'Oily'],
+    description: 'A lightweight gel cream with 5% panthenol, tea tree and cica exosome that calms breakouts with a non-greasy finish.',
+    ingredients: ['Panthenol 5%', 'Tea Tree', 'Cica Exosome']
+  },
+  {
+    id: 'skin1004-silky-fit-sun-stick',
+    name: 'SKIN1004 CENTELLA HYALU-CICA SILKY-FIT SUN STICK',
+    brand: 'SKIN1004',
+    price: 12.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/13.jpg?v=1780544543&width=800',
+    category: 'Sun Care',
+    skinType: ['All', 'Oily'],
+    description: 'An SPF50+ PA++++ sun stick that glides on and sets to a silky, breathable finish with no white cast — perfect for reapplying.',
+    ingredients: ['Centella Asiatica', 'Hyaluronic Acid', 'Blue Agave']
+  },
+  {
+    id: 'skin1004-hyalu-cica-sleeping-pack',
+    name: 'SKIN1004 CENTELLA HYALU-CICA SLEEPING PACK',
+    brand: 'SKIN1004',
+    price: 19.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/12.jpg?v=1780544397&width=800',
+    category: 'Masks & Treatments',
+    skinType: ['Dry', 'Dehydrated'],
+    description: 'A light, no-rinse overnight gel mask with melatonin and ceramide biome to restore moisture and even out skin tone.',
+    ingredients: ['Hyaluronic Acid', 'Melatonin', 'Ceramide']
+  },
+  {
+    id: 'skin1004-tone-brightening-gel-foam',
+    name: 'SKIN1004 CENTELLA TONE BRIGHTENING CLEANSING GEL FOAM',
+    brand: 'SKIN1004',
+    price: 16.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/CENTELLATONEBRIGHTENINGCLEASINGGELFOAM.jpg?v=1769854937&width=800',
+    category: 'Cleansers',
+    skinType: ['Dull', 'All'],
+    description: 'A moisturizing gel-to-foam cleanser with fruit-based exfoliators and vitamin C that brightens without stripping.',
+    ingredients: ['Centella Asiatica', 'Niacinamide', 'Ethyl Ascorbic Acid']
+  },
+  {
+    id: 'skin1004-glow-duo',
+    name: 'SKIN1004 CENTELLA GLOW 1004 DUO',
+    brand: 'SKIN1004',
+    price: 48.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/CENTELLAGLOW1004DUO.jpg?v=1769854742&width=800',
+    category: 'Masks & Treatments',
+    skinType: ['All', 'Sensitive'],
+    description: 'A two-step calming and glow set built on fermented Madagascan Centella and ceramides for a strong, dewy barrier.',
+    ingredients: ['Fermented Centella', 'Ceramide NP', 'TECA']
+  },
+  {
+    id: 'skin1004-retinol-boosting-shot',
+    name: 'SKIN1004 CENTELLA RETINOL 0.2 BOOSTING SHOT AMPOULE',
+    brand: 'SKIN1004',
+    price: 24.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/CENTELLARETINOL0.2BOOSTINGSHOTAMPOULE.jpg?v=1769854669&width=800',
+    category: 'Serums & Ampoules',
+    skinType: ['Mature'],
+    description: 'A retinol and retinal ampoule with a spicule boosting system for deeper absorption, firmer skin and fewer fine lines.',
+    ingredients: ['Retinol', 'Retinal', 'Centella Asiatica']
+  },
+  {
+    id: 'skin1004-velvet-finish-sunscreen',
+    name: 'SKIN1004 CENTELLA POREMIZING VELVET FINISH SUNSCREEN',
+    brand: 'SKIN1004',
+    price: 20.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/CENTELLAPOREMIZINGVELVETFINISHSUNSCREEN.jpg?v=1769854196&width=800',
+    category: 'Sun Care',
+    skinType: ['Oily', 'Large Pores'],
+    description: 'A beige-tinted SPF50+ PA++++ sunscreen that blurs pores and controls oil for a smooth, even finish up to 12 hours.',
+    ingredients: ['Centella Asiatica', 'Sea Salt', 'Niacinamide']
+  },
+  {
+    id: 'skin1004-zombie-witch-pack',
+    name: 'SKIN1004 CENTELLA ZOMBIE BEAUTY WITCH PACK 16EA',
+    brand: 'SKIN1004',
+    price: 20.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/CENTELLAZOMBIEBEAUTYWITCHPACK16EA_RENEWAL.jpg?v=1769854107&width=800',
+    category: 'Masks & Treatments',
+    skinType: ['Oily', 'Redness'],
+    description: 'A cooling green wash-off mud mask with kaolin and bentonite that decongests pores and calms redness. Brush included.',
+    ingredients: ['Kaolin', 'Bentonite', 'Centella Asiatica']
+  },
+  {
+    id: 'skin1004-hyalu-cica-cloudy-mist',
+    name: 'SKIN1004 CENTELLA HYALU-CICA CLOUDY MIST',
+    brand: 'SKIN1004',
+    price: 24.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/CENTELLAHYALU-CICACLOUDYMIST_RENEWAL.jpg?v=1769854029&width=800',
+    category: 'Toners & Essences',
+    skinType: ['Dry', 'Sensitive'],
+    description: 'An ultra-fine cooling mist with 8 layers of hyaluronic acid, green tea and centella for instant, lasting moisture.',
+    ingredients: ['Hyaluronic Acid', 'Centella Asiatica', 'Green Tea']
+  },
+  {
+    id: 'skin1004-toning-toner',
+    name: 'SKIN1004 CENTELLA TONING TONER',
+    brand: 'SKIN1004',
+    price: 18.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/CENTELLATONINGTONER.jpg?v=1769852653&width=800',
+    category: 'Toners & Essences',
+    skinType: ['All', 'Acne-Prone'],
+    description: 'A watery everyday toner with PHA that gently removes sebum and dead skin for clear, bright skin — safe for acne-prone skin.',
+    ingredients: ['Centella Asiatica', 'PHA', 'Betaine']
+  },
+  {
+    id: 'skin1004-soothing-cream',
+    name: 'SKIN1004 CENTELLA SOOTHING CREAM',
+    brand: 'SKIN1004',
+    price: 16.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/CENTELLASOOTHINGCREAM.jpg?v=1769852584&width=800',
+    category: 'Moisturizers',
+    skinType: ['Sensitive', 'Redness'],
+    description: 'A lightweight gel cream with ceramide, cholesterol and fatty acids that quickly calms sensitive skin and strengthens the barrier.',
+    ingredients: ['Centella Asiatica', 'Ceramide', 'Trehalose']
+  },
+  {
+    id: 'skin1004-zombie-pumpkin-pack',
+    name: 'SKIN1004 CENTELLA ZOMBIE BEAUTY PUMPKIN PACK',
+    brand: 'SKIN1004',
+    price: 25.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/CENTELLAZOMBIEBEAUTYPUMPKINPACK.jpg?v=1769851811&width=800',
+    category: 'Masks & Treatments',
+    skinType: ['Dry', 'Dull'],
+    description: 'A leave-on overnight jelly mask with pumpkin, honey and propolis for hydrated, glowing skin by morning.',
+    ingredients: ['Pumpkin Extract', 'Honey', 'Propolis']
+  },
+  {
+    id: 'skin1004-hyalu-cica-blue-serum',
+    name: 'SKIN1004 CENTELLA HYALU-CICA BLUE SERUM',
+    brand: 'SKIN1004',
+    price: 20.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/CENTELLAHYALU-CICABLUESERUM.jpg?v=1769851643&width=800',
+    category: 'Serums & Ampoules',
+    skinType: ['Dry', 'Dehydrated', 'Dull'],
+    description: 'A light gel serum with 5 types of hyaluronic acid, niacinamide and adenosine for long-lasting moisture and brightness.',
+    ingredients: ['Hyaluronic Acid', 'Niacinamide', 'Ceramide NP']
+  },
+  {
+    id: 'skin1004-hyalu-cica-brightening-toner',
+    name: 'SKIN1004 CENTELLA HYALU-CICA BRIGHTENING TONER',
+    brand: 'SKIN1004',
+    price: 20.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/CENTELLAHYALU-CICABRIGHTENINGTONER.jpg?v=1769851506&width=800',
+    category: 'Toners & Essences',
+    skinType: ['Dull', 'Combination'],
+    description: 'A moisturizing toner with mild AHA + LHA that exfoliates clogged pores and brightens.',
+    ingredients: ['Hyaluronic Acid', 'Citric Acid', 'Capryloyl Salicylic Acid']
+  },
+  {
+    id: 'skin1004-zombie-pack-kit',
+    name: 'SKIN1004 CENTELLA ZOMBIE BEAUTY ZOMBIE PACK & ACTIVATOR KIT',
+    brand: 'SKIN1004',
+    price: 32.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/CENTELLAZOMBIEBEAUTYZOMBIEPACK_ACTIVATORKIT.jpg?v=1769851038&width=800',
+    category: 'Masks & Treatments',
+    skinType: ['Mature', 'Large Pores'],
+    description: 'The viral mix-and-apply tightening mask with albumin that lifts sagging skin and refines pores.',
+    ingredients: ['Albumin', 'Centella Asiatica', 'Aloe Vera']
+  },
 
   // --- SOME BY MI ---
   {
@@ -884,6 +1598,52 @@ export const PRODUCTS: Product[] = [
     rating: 4.9,
     description: 'A trial kit featuring the best of SOME BY MI\'s Retinol Intense line.',
     ingredients: ['Retinol', 'Retinal', 'Bakuchiol']
+  },
+
+  // --- VT Cosmetics ---
+  {
+    id: 'vt-reedle-shot-lifting-cream',
+    name: 'VT Reedle Shot Lifting Cream',
+    brand: 'VT Cosmetics',
+    price: 45.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/VTReedleShotLiftingCream50ml.jpg?v=1787153330&width=800',
+    category: 'Moisturizers',
+    skinType: ['Mature', 'Dry'],
+    description: 'A firming cream with CICA REEDLE technology and peptides that refines texture and restores elasticity without heaviness.',
+    ingredients: ['CICA Reedle', 'Acetyl Hexapeptide-8', 'Stem Cell Extract']
+  },
+  {
+    id: 'vt-reedle-shot-lifting-serum',
+    name: 'VT Reedle Shot Lifting Serum',
+    brand: 'VT Cosmetics',
+    price: 39.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/VTReedleShotLiftingSerum30ml.webp?v=1787153229&width=800',
+    category: 'Serums & Ampoules',
+    skinType: ['Mature'],
+    description: 'A micro-needling-inspired serum with collagen, elastin and hyaluronic acid to hydrate and visibly firm skin.',
+    ingredients: ['CICA Reedle', 'Acetyl Hexapeptide-8', 'Hyaluronic Acid']
+  },
+  {
+    id: 'vt-reedle-shot-100',
+    name: 'VT Reedle Shot 100',
+    brand: 'VT Cosmetics',
+    price: 36.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/VTReedleShot100.jpg?v=1787153093&width=800',
+    category: 'Serums & Ampoules',
+    skinType: ['All', 'Acne-Prone', 'Large Pores'],
+    description: 'A \'step zero\' serum whose micro Cica Reedles gently exfoliate and boost absorption of everything that follows.',
+    ingredients: ['CICA Reedle', 'Hyaluronic Acid', 'Propolis']
+  },
+  {
+    id: 'vt-reedle-lip-plumper',
+    name: 'VT Reedle Shot Lip Plumper Expert',
+    brand: 'VT Cosmetics',
+    price: 20.00,
+    image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/files/VTReedleshotLipPlumperExpert.jpg?v=1787151944&width=800',
+    category: 'Masks & Treatments',
+    skinType: ['All'],
+    description: 'A plumping lip gloss with micro silica particles that boosts natural lip volume while deeply hydrating.',
+    ingredients: ['Micro Silica', 'Hyaluronic Acid', 'Jojoba Oil']
   }
 ];
 
@@ -894,6 +1654,19 @@ export const BRANDS: Brand[] = [
   { id: 'axis-y', name: 'Axis-Y', image: 'https://kbeautybylea.com/cdn/shop/collections/Axis-Y-Logo-558591.png?v=1732970315&width=2048', description: 'Climate-inspired skincare solutions for modern lifestyles.' },
   { id: 'eqqualberry', name: 'Eqqualberry', image: 'https://myseoulmyskin.com/cdn/shop/collections/Eqqualberry_Brand_Logo.webp?v=1762472734&width=750', description: 'Innovative skincare focusing on skin energy and resilience.' },
   { id: 'skin1004', name: 'SKIN1004', image: 'https://zohrashop.com/wp-content/uploads/2025/03/310433344_422297736731290_8747799812678856399_n.jpg.webp', description: 'Harnessing the power of raw nature from Madagascar.' },
+  { id: 'medicube', name: 'Medicube', image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/collections/870F8F4F-D1F0-496B-980C-F56F4F58238B.jpg?v=1769765736&width=600', description: 'Derma-inspired skincare built around clinically tested actives like PDRN and collagen.' },
+  { id: 'dr-althea', name: 'Dr. Althea', image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/collections/5DC7E9A6-0B64-49CD-A9BB-E0030DC4E2B5.jpg?v=1769765660&width=600', description: 'Gentle, effective formulas that calm and restore sensitive skin.' },
+  { id: 'vt-cosmetics', name: 'VT Cosmetics', image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/collections/VT_Cosmetics.jpg?v=1786994283&width=600', description: 'Home of Reedle Shot — cica micro-needle technology for visible renewal.' },
+  { id: 'dr-melaxin', name: 'Dr.Melaxin', image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/collections/Dr._Melaxin.jpg?v=1786994195&width=600', description: 'Calcium and rice-powered skincare for firm, luminous skin.' },
+  { id: 'epii', name: 'epii', image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/collections/epii.jpg?v=1786994109&width=600', description: 'Science-led, dual-action formulas for resilient, glowing skin.' },
+  { id: 'numbuzin', name: 'Numbuzin', image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/collections/B674B169-AD01-4330-B827-EFA588C3B9AB.jpg?v=1771860806&width=600', description: 'Numbered skincare solutions, each targeting a specific skin concern.' },
+  { id: 'somebymi', name: 'SOME BY MI', image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/collections/31D20D8E-BFF2-4031-BB41-E297B4463869.jpg?v=1769765839&width=600', description: 'Targeted treatments for troubled skin, from retinol to AHA/BHA care.' },
+  { id: 'beauty-of-joseon', name: 'Beauty of Joseon', image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/collections/Beauty_of_Joseon.jpg?v=1786994497&width=600', description: 'Hanbang beauty rituals reimagined with modern, gentle formulas.' },
+  { id: 'centellian-24', name: 'Centellian 24', image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/collections/Centellian_24.jpg?v=1786994381&width=600', description: 'Pharmaceutical-grade centella care for barrier repair and anti-aging.' },
+  { id: 'arencia', name: 'Arencia', image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/collections/Arencia.jpg?v=1786993966&width=600', description: 'Clean, ingredient-forward Korean skincare for a fresh, healthy glow.' },
+  { id: 'biodance', name: 'Biodance', image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/collections/Biodance.jpg?v=1770374643&width=600', description: 'Bio-collagen masks that melt into the skin for an overnight glow.' },
+  { id: 'celimax', name: 'Celimax', image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/collections/CCA23931-D95D-401A-A077-26F184C9CDCF.jpg?v=1769765787&width=600', description: 'Simple, high-performing skincare built on proven active ingredients.' },
+  { id: 'laneige', name: 'Laneige', image: 'https://cdn.shopify.com/s/files/1/0988/9208/7588/collections/D7B657D9-DE0F-4684-A685-07CCC2D3DF40.jpg?v=1769766101&width=600', description: 'Water science skincare famous for its iconic Lip Sleeping Mask.' },
 ];
 
 export const CATEGORIES: Category[] = [

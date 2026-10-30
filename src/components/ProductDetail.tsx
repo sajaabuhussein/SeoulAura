@@ -46,14 +46,16 @@ export const ProductDetail = ({ product, onAddToCart, onBack, onToggleWishlist, 
         {/* Product Info */}
         <div className="space-y-8">
           <div className="space-y-4">
-            <div className="flex items-center gap-2 text-rose-gold">
-              <div className="flex">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className={`w-4 h-4 ${i < Math.floor(product.rating) ? 'fill-rose-gold' : 'text-charcoal/10'}`} />
-                ))}
+            {product.rating !== undefined && (
+              <div className="flex items-center gap-2 text-rose-gold">
+                <div className="flex">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className={`w-4 h-4 ${i < Math.floor(product.rating) ? 'fill-rose-gold' : 'text-charcoal/10'}`} />
+                  ))}
+                </div>
+                <span className="text-sm font-medium text-charcoal/60">({product.rating} / 5.0)</span>
               </div>
-              <span className="text-sm font-medium text-charcoal/60">({product.rating} / 5.0)</span>
-            </div>
+            )}
             <p className="text-xs uppercase tracking-[0.3em] text-rose-gold font-bold">{product.brand}</p>
             <h1 className="text-5xl font-heading text-charcoal">{product.name}</h1>
             <p className="text-2xl font-semibold text-charcoal">${product.price.toFixed(2)}</p>
