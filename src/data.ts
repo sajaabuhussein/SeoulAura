@@ -74,8 +74,7 @@ export const PRODUCTS: Product[] = [
     skinType: ['Sensitive', 'Acne-Prone'],
     rating: 4.9,
     description: 'The viral soothing toner that calms irritation and balances skin pH.',
-    ingredients: ['Heartleaf Extract 77%', 'Centella Asiatica', 'Portulaca Oleracea'],
-    isBestSeller: true
+    ingredients: ['Heartleaf Extract 77%', 'Centella Asiatica', 'Portulaca Oleracea']
   },
   {
     id: 'anua-oil',
@@ -99,8 +98,7 @@ export const PRODUCTS: Product[] = [
     skinType: ['Oily', 'Combination', 'Sensitive'],
     rating: 4.8,
     description: 'Deep cleansing foam with Quercetinol to clear pores and soothe skin.',
-    ingredients: ['Heartleaf Extract', 'Quercetinol', 'Hyaluronic Acid'],
-    isBestSeller: true
+    ingredients: ['Heartleaf Extract', 'Quercetinol', 'Hyaluronic Acid']
   },
   {
     id: 'anua-peach',
@@ -124,8 +122,7 @@ export const PRODUCTS: Product[] = [
     skinType: ['Sensitive', 'Acne-Prone', 'Redness'],
     rating: 4.7,
     description: 'Soothing serum with Azelaic Acid and Hyaluronic Acid to reduce redness and calm skin.',
-    ingredients: ['Azelaic Acid 10%', 'Hyaluronic Acid', 'Centella Asiatica'],
-    isNew: true
+    ingredients: ['Azelaic Acid 10%', 'Hyaluronic Acid', 'Centella Asiatica']
   },
   {
     id: 'anua-pdrn-capsule-mist',
@@ -149,7 +146,8 @@ export const PRODUCTS: Product[] = [
     category: 'Serums & Ampoules',
     skinType: ['All', 'Dull'],
     description: 'A lightweight, fast-absorbing antioxidant serum that revives tired-looking skin and supports the barrier.',
-    ingredients: ['Vitamin C', 'Glutathione', 'Niacinamide']
+    ingredients: ['Vitamin C', 'Glutathione', 'Niacinamide'],
+    isNew: true
   },
 
   // --- Axis-Y ---
@@ -199,7 +197,8 @@ export const PRODUCTS: Product[] = [
     category: 'Sun Care',
     skinType: ['All', 'Dry', 'Sensitive'],
     description: 'The cult creamy sunscreen that feels like a moisturizer — lightweight, non-sticky and enriched with 30% rice extract.',
-    ingredients: ['Rice Extract 30%', 'Grain Ferment Extracts']
+    ingredients: ['Rice Extract 30%', 'Grain Ferment Extracts'],
+    isNew: true
   },
 
   // --- Biodance ---
@@ -213,8 +212,7 @@ export const PRODUCTS: Product[] = [
     skinType: ['All', 'Dry', 'Mature'],
     rating: 4.9,
     description: 'Deeply hydrating collagen mask that improves skin elasticity and texture.',
-    ingredients: ['Bio-Collagen', 'Hyaluronic Acid', 'Probiotics'],
-    isBestSeller: true
+    ingredients: ['Bio-Collagen', 'Hyaluronic Acid', 'Probiotics']
   },
 
   // --- Celimax ---
@@ -229,7 +227,7 @@ export const PRODUCTS: Product[] = [
     rating: 4.8,
     description: 'Retinal booster that tightens pores and improves skin texture.',
     ingredients: ['Retinal', 'Adenosine', 'Peptides'],
-    isNew: true
+    isBestSeller: true
   },
 
   // --- Centellian 24 ---
@@ -268,7 +266,8 @@ export const PRODUCTS: Product[] = [
     skinType: ['Acne-Prone'],
     rating: 4.9,
     description: 'The cult-favorite hydrocolloid patches that speed up the healing process of breakouts.',
-    ingredients: ['Hydrocolloid']
+    ingredients: ['Hydrocolloid'],
+    isBestSeller: true
   },
   {
     id: 'snail-cream',
@@ -292,8 +291,7 @@ export const PRODUCTS: Product[] = [
     skinType: ['All', 'Sensitive', 'Dehydrated'],
     rating: 4.9,
     description: 'A powerful essence that repairs skin damage and improves skin texture with 96% snail mucin.',
-    ingredients: ['Snail Secretion Filtrate', 'Sodium Hyaluronate', 'Arginine'],
-    isBestSeller: true
+    ingredients: ['Snail Secretion Filtrate', 'Sodium Hyaluronate', 'Arginine']
   },
   {
     id: 'snail-eye-patch',
@@ -353,8 +351,7 @@ export const PRODUCTS: Product[] = [
     skinType: ['Oily', 'Combination', 'Acne-Prone'],
     rating: 4.9,
     description: 'Powerful BHA liquid that clears out blackheads and prevents new ones from forming.',
-    ingredients: ['Betaine Salicylate', 'Willow Bark Water', 'Niacinamide'],
-    isBestSeller: true
+    ingredients: ['Betaine Salicylate', 'Willow Bark Water', 'Niacinamide']
   },
   {
     id: 'cosrx-niacinamide-15',
@@ -573,7 +570,8 @@ export const PRODUCTS: Product[] = [
     skinType: ['Sensitive', 'Acne-Prone', 'Combination'],
     rating: 4.9,
     description: 'Soothing relief cream that calms irritation and reduces redness.',
-    ingredients: ['Centella Asiatica', 'Resveratrol', 'Niacinamide']
+    ingredients: ['Centella Asiatica', 'Resveratrol', 'Niacinamide'],
+    isBestSeller: true
   },
   {
     id: 'dr-althea-vit-c',
@@ -692,7 +690,8 @@ export const PRODUCTS: Product[] = [
     category: 'Moisturizers',
     skinType: ['Dull', 'Mature'],
     description: 'A beige-tinted eye cream that instantly blurs dark circles while brightening and firming the under-eye area.',
-    ingredients: ['Calcium', 'Reboric']
+    ingredients: ['Calcium', 'Reboric'],
+    isNew: true
   },
   {
     id: 'dr-melaxin-calcium-multi-balm',
@@ -703,7 +702,8 @@ export const PRODUCTS: Product[] = [
     category: 'Moisturizers',
     skinType: ['Dry', 'Dehydrated'],
     description: 'A travel-friendly balm stick that delivers targeted hydration and radiance to dry or delicate areas throughout the day.',
-    ingredients: ['Bio-Calcium', 'Collagen', 'Adenosine']
+    ingredients: ['Bio-Calcium', 'Collagen', 'Adenosine'],
+    isNew: true
   },
   {
     id: 'dr-melaxin-black-rice-peel-shot',
@@ -714,7 +714,8 @@ export const PRODUCTS: Product[] = [
     category: 'Serums & Ampoules',
     skinType: ['Oily', 'Dull', 'Large Pores'],
     description: 'A gommage-style exfoliating ampoule with AHA, BHA and black rice that clears pores and brightens dull, uneven skin.',
-    ingredients: ['Black Rice Extract', 'AHA/BHA', 'Niacinamide']
+    ingredients: ['Black Rice Extract', 'AHA/BHA', 'Niacinamide'],
+    isNew: true
   },
   {
     id: 'dr-melaxin-white-rice-peel-shot',
@@ -725,7 +726,8 @@ export const PRODUCTS: Product[] = [
     category: 'Serums & Ampoules',
     skinType: ['Dull', 'Normal'],
     description: 'An exfoliating, brightening ampoule with white rice and chemical exfoliants that renews skin while keeping it hydrated — for face and body.',
-    ingredients: ['White Rice Extract', 'AHA/BHA', 'Rice Bran Water']
+    ingredients: ['White Rice Extract', 'AHA/BHA', 'Rice Bran Water'],
+    isNew: true
   },
 
   // --- epii ---
@@ -738,7 +740,8 @@ export const PRODUCTS: Product[] = [
     category: 'Toners & Essences',
     skinType: ['All', 'Sensitive', 'Dull'],
     description: 'A watery gel toner with 5% PHA and snow mushroom that gently refines texture and leaves an instant silky glow.',
-    ingredients: ['PHA 5%', 'Snow Mushroom', 'Hyaluronic Acid']
+    ingredients: ['PHA 5%', 'Snow Mushroom', 'Hyaluronic Acid'],
+    isNew: true
   },
   {
     id: 'epii-double-up-ectoin-panthenol',
@@ -749,7 +752,8 @@ export const PRODUCTS: Product[] = [
     category: 'Moisturizers',
     skinType: ['Sensitive', 'Redness', 'Dry'],
     description: 'A dual-texture cream that calms reactive skin and strengthens the barrier with ectoin, 3% panthenol and 15% squalane.',
-    ingredients: ['Ectoin', 'Panthenol 3%', 'Squalane 15%']
+    ingredients: ['Ectoin', 'Panthenol 3%', 'Squalane 15%'],
+    isNew: true
   },
   {
     id: 'epii-hpr-pro-shot',
@@ -771,7 +775,8 @@ export const PRODUCTS: Product[] = [
     category: 'Moisturizers',
     skinType: ['Dull', 'Mature'],
     description: 'A soft-pink dual-action cream with NAD+, NMN and TXA that firms, evens tone and fades dark spots, plus 15% squalane.',
-    ingredients: ['NAD+', 'NMN', 'Tranexamic Acid']
+    ingredients: ['NAD+', 'NMN', 'Tranexamic Acid'],
+    isNew: true
   },
 
   // --- Eqqualberry ---
@@ -821,7 +826,8 @@ export const PRODUCTS: Product[] = [
     skinType: ['All', 'Mature'],
     rating: 4.9,
     description: 'Smoothie-textured serum that revitalizes and firms the skin.',
-    ingredients: ['NAD+', 'Peptides', 'Vitamin B12']
+    ingredients: ['NAD+', 'Peptides', 'Vitamin B12'],
+    isBestSeller: true
   },
   {
     id: 'eqqualberry-vitamin-cream',
@@ -1610,7 +1616,8 @@ export const PRODUCTS: Product[] = [
     category: 'Moisturizers',
     skinType: ['Mature', 'Dry'],
     description: 'A firming cream with CICA REEDLE technology and peptides that refines texture and restores elasticity without heaviness.',
-    ingredients: ['CICA Reedle', 'Acetyl Hexapeptide-8', 'Stem Cell Extract']
+    ingredients: ['CICA Reedle', 'Acetyl Hexapeptide-8', 'Stem Cell Extract'],
+    isNew: true
   },
   {
     id: 'vt-reedle-shot-lifting-serum',
@@ -1621,7 +1628,8 @@ export const PRODUCTS: Product[] = [
     category: 'Serums & Ampoules',
     skinType: ['Mature'],
     description: 'A micro-needling-inspired serum with collagen, elastin and hyaluronic acid to hydrate and visibly firm skin.',
-    ingredients: ['CICA Reedle', 'Acetyl Hexapeptide-8', 'Hyaluronic Acid']
+    ingredients: ['CICA Reedle', 'Acetyl Hexapeptide-8', 'Hyaluronic Acid'],
+    isNew: true
   },
   {
     id: 'vt-reedle-shot-100',
@@ -1632,7 +1640,8 @@ export const PRODUCTS: Product[] = [
     category: 'Serums & Ampoules',
     skinType: ['All', 'Acne-Prone', 'Large Pores'],
     description: 'A \'step zero\' serum whose micro Cica Reedles gently exfoliate and boost absorption of everything that follows.',
-    ingredients: ['CICA Reedle', 'Hyaluronic Acid', 'Propolis']
+    ingredients: ['CICA Reedle', 'Hyaluronic Acid', 'Propolis'],
+    isNew: true
   },
   {
     id: 'vt-reedle-lip-plumper',
@@ -1643,7 +1652,8 @@ export const PRODUCTS: Product[] = [
     category: 'Masks & Treatments',
     skinType: ['All'],
     description: 'A plumping lip gloss with micro silica particles that boosts natural lip volume while deeply hydrating.',
-    ingredients: ['Micro Silica', 'Hyaluronic Acid', 'Jojoba Oil']
+    ingredients: ['Micro Silica', 'Hyaluronic Acid', 'Jojoba Oil'],
+    isNew: true
   }
 ];
 
