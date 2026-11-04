@@ -19,8 +19,20 @@ import { Footer } from './components/Footer';
 import { SakuraPetals } from './components/SakuraPetals';
 import { SkinQuiz } from './components/SkinQuiz';
 import { InfoPage } from './components/InfoPage';
-import { Product, CartItem, RecommendedProduct } from './types';
-import { PRODUCTS } from './data';
+import { Product, CartItem } from './types';
+import { evaluateQuiz, loadQuiz, summaryLabel, toPlainProduct, type QuizOutcome } from './quiz';
+
+/** Rebuilds the quiz outcome from saved answers. Corrupt or outdated data simply means "no saved quiz". */
+const restoreQuiz = (): QuizOutcome | null => {
+  try {
+    const loaded = loadQuiz(localStorage);
+    if (loaded.ok === false || loaded.value === null) return null;
+    const evaluated = evaluateQuiz(loaded.value);
+    return evaluated.ok ? evaluated.value : null;
+  } catch {
+    return null;
+  }
+};
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -33,15 +45,10 @@ export default function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isWishlistOpen, setIsWishlistOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [quizResult, setQuizResult] = useState<string | null>(() => {
-    const saved = localStorage.getItem('skin_quiz_result');
-    if (saved) {
-      const parsed = JSON.parse(saved);
-      return `${parsed.skinType}${parsed.concerns?.length > 0 ? ` + ${parsed.concerns.join(', ')}` : ''}`;
-    }
-    return null;
-  });
-  const [recommendedRoutine, setRecommendedRoutine] = useState<{ AM: RecommendedProduct[]; PM: RecommendedProduct[] } | null>(null);
+  const [quizOutcome, setQuizOutcome] = useState<QuizOutcome | null>(restoreQuiz);
+  // Home keeps its original props; both are derived from the single stored outcome.
+  const quizResult = quizOutcome ? summaryLabel(quizOutcome.profile, 'en') : null;
+  const recommendedRoutine = quizOutcome?.routine ?? null;
   const [wishlistItems, setWishlistItems] = useState<Product[]>(() => {
     const saved = localStorage.getItem('seoul_aura_wishlist');
     return saved ? JSON.parse(saved) : [];
@@ -55,19 +62,6 @@ export default function App() {
   useEffect(() => {
     localStorage.setItem('seoul_aura_wishlist', JSON.stringify(wishlistItems));
   }, [wishlistItems]);
-
-  useEffect(() => {
-    if (quizResult && !recommendedRoutine) {
-      // Re-calculate routine if it's not in state (e.g. on page reload)
-      const savedResult = localStorage.getItem('skin_quiz_result');
-      if (savedResult) {
-        const result = JSON.parse(savedResult);
-        // We need the full result object to call getRecommendedProducts, but it's in SkinQuiz.tsx
-        // For now, let's just use a simple version or wait for the user to re-run the quiz
-        // Alternatively, we could move getRecommendedProducts to a shared utility file.
-      }
-    }
-  }, [quizResult]);
 
   // Shop State Persistence
   const [shopCategory, setShopCategory] = useState('All');
@@ -127,6 +121,8 @@ export default function App() {
   }, [currentPage]);
 
   const handleAddToCart = (product: Product, quantity: number = 1) => {
+    // Callers such as the Home routine pass recommendation metadata (reason codes reveal health answers); never persist it.
+    product = toPlainProduct(product);
     setCartItems(prev => {
       const existing = prev.find(item => item.id === product.id);
       if (existing) {
@@ -375,16 +371,14 @@ export default function App() {
             className="fixed inset-0 z-[100] bg-cream-white overflow-hidden"
           >
             <SkinQuiz
-              isOpen={true}
               onClose={() => handlePageChange('home', true)}
               onAddToCart={(p) => handleAddToCart(p)}
               onProductClick={handleProductClick}
               onToggleWishlist={handleToggleWishlist}
               wishlistItems={wishlistItems}
-              onComplete={(result, routine) => {
-                setQuizResult(result);
-                setRecommendedRoutine(routine);
-              }}
+              onComplete={setQuizOutcome}
+              savedOutcome={quizOutcome}
+              onShop={() => handlePageChange('shop')}
             />
           </motion.div>
         )}

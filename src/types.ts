@@ -14,20 +14,7 @@ export interface Product {
   isBestSeller?: boolean;
 }
 
-export interface RecommendedProduct extends Product {
-  reason: string;
-}
-
-export interface QuizResult {
-  primary: string;
-  secondary: string | null;
-  confidence: number;
-  profile: {
-    hydration: 'Low' | 'Medium' | 'High';
-    oilControl: 'Low' | 'Medium' | 'High';
-    sensitivity: 'Low' | 'Medium' | 'High';
-  };
-}
+export type { RecommendedProduct } from './quiz/types';
 
 export interface CartItem extends Product {
   quantity: number;
